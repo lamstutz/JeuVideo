@@ -6,6 +6,7 @@ public class Track : MonoBehaviour
 {
 
     public Transform target;
+    public int marge = 30;
 
     // Use this for initialization
     void Start()
@@ -16,6 +17,9 @@ public class Track : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+
+
         this.transform.position = new Vector3(
             target.position.x,
             target.position.y,

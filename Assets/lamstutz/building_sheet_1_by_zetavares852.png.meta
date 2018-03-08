@@ -3,7 +3,67 @@ guid: bf7c5e72900b84fcf8cd1cbcc267bf74
 timeCreated: 1520529331
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: building_sheet_1_by_zetavares852_0
+    21300002: building_sheet_1_by_zetavares852_1
+    21300004: building_sheet_1_by_zetavares852_2
+    21300006: building_sheet_1_by_zetavares852_3
+    21300008: building_sheet_1_by_zetavares852_4
+    21300010: building_sheet_1_by_zetavares852_5
+    21300012: building_sheet_1_by_zetavares852_6
+    21300014: building_sheet_1_by_zetavares852_7
+    21300016: building_sheet_1_by_zetavares852_8
+    21300018: building_sheet_1_by_zetavares852_9
+    21300020: building_sheet_1_by_zetavares852_10
+    21300022: building_sheet_1_by_zetavares852_11
+    21300024: building_sheet_1_by_zetavares852_12
+    21300026: building_sheet_1_by_zetavares852_13
+    21300028: building_sheet_1_by_zetavares852_14
+    21300030: building_sheet_1_by_zetavares852_15
+    21300032: building_sheet_1_by_zetavares852_16
+    21300034: building_sheet_1_by_zetavares852_17
+    21300036: building_sheet_1_by_zetavares852_18
+    21300038: building_sheet_1_by_zetavares852_19
+    21300040: building_sheet_1_by_zetavares852_20
+    21300042: building_sheet_1_by_zetavares852_21
+    21300044: building_sheet_1_by_zetavares852_22
+    21300046: building_sheet_1_by_zetavares852_23
+    21300048: building_sheet_1_by_zetavares852_24
+    21300050: building_sheet_1_by_zetavares852_25
+    21300052: building_sheet_1_by_zetavares852_26
+    21300054: building_sheet_1_by_zetavares852_27
+    21300056: building_sheet_1_by_zetavares852_28
+    21300058: building_sheet_1_by_zetavares852_29
+    21300060: building_sheet_1_by_zetavares852_30
+    21300062: building_sheet_1_by_zetavares852_31
+    21300064: building_sheet_1_by_zetavares852_32
+    21300066: building_sheet_1_by_zetavares852_33
+    21300068: building_sheet_1_by_zetavares852_34
+    21300070: building_sheet_1_by_zetavares852_35
+    21300072: building_sheet_1_by_zetavares852_36
+    21300074: building_sheet_1_by_zetavares852_37
+    21300076: building_sheet_1_by_zetavares852_38
+    21300078: building_sheet_1_by_zetavares852_39
+    21300080: building_sheet_1_by_zetavares852_40
+    21300082: building_sheet_1_by_zetavares852_41
+    21300084: building_sheet_1_by_zetavares852_42
+    21300086: building_sheet_1_by_zetavares852_43
+    21300088: building_sheet_1_by_zetavares852_44
+    21300090: building_sheet_1_by_zetavares852_45
+    21300092: building_sheet_1_by_zetavares852_46
+    21300094: building_sheet_1_by_zetavares852_47
+    21300096: building_sheet_1_by_zetavares852_48
+    21300098: building_sheet_1_by_zetavares852_49
+    21300100: building_sheet_1_by_zetavares852_50
+    21300102: building_sheet_1_by_zetavares852_51
+    21300104: building_sheet_1_by_zetavares852_52
+    21300106: building_sheet_1_by_zetavares852_53
+    21300108: building_sheet_1_by_zetavares852_54
+    21300110: building_sheet_1_by_zetavares852_55
+    21300112: building_sheet_1_by_zetavares852_56
+    21300114: building_sheet_1_by_zetavares852_57
+    21300116: building_sheet_1_by_zetavares852_58
+    21300118: building_sheet_1_by_zetavares852_59
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -40,13 +100,13 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -66,9 +126,869 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: building_sheet_1_by_zetavares852_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 927
+        width: 282
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: building_sheet_1_by_zetavares852_1
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 928
+        width: 144
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: building_sheet_1_by_zetavares852_2
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 912
+        width: 74
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: building_sheet_1_by_zetavares852_3
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 917
+        width: 272
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: building_sheet_1_by_zetavares852_4
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 928
+        width: 76
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: building_sheet_1_by_zetavares852_5
+      rect:
+        serializedVersion: 2
+        x: 865
+        y: 928
+        width: 78
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: building_sheet_1_by_zetavares852_6
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 928
+        width: 80
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: building_sheet_1_by_zetavares852_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 828
+        width: 208
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: building_sheet_1_by_zetavares852_8
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 831
+        width: 60
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: building_sheet_1_by_zetavares852_9
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 832
+        width: 62
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: building_sheet_1_by_zetavares852_10
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 832
+        width: 62
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: building_sheet_1_by_zetavares852_11
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 832
+        width: 127
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: building_sheet_1_by_zetavares852_12
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 832
+        width: 62
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: building_sheet_1_by_zetavares852_13
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 832
+        width: 62
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: building_sheet_1_by_zetavares852_14
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 832
+        width: 76
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: building_sheet_1_by_zetavares852_15
+      rect:
+        serializedVersion: 2
+        x: 738
+        y: 832
+        width: 76
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: building_sheet_1_by_zetavares852_16
+      rect:
+        serializedVersion: 2
+        x: 817
+        y: 832
+        width: 62
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: building_sheet_1_by_zetavares852_17
+      rect:
+        serializedVersion: 2
+        x: 882
+        y: 832
+        width: 61
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: building_sheet_1_by_zetavares852_18
+      rect:
+        serializedVersion: 2
+        x: 949
+        y: 832
+        width: 54
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: building_sheet_1_by_zetavares852_19
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 704
+        width: 80
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: building_sheet_1_by_zetavares852_20
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 688
+        width: 63
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: building_sheet_1_by_zetavares852_21
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 688
+        width: 74
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: building_sheet_1_by_zetavares852_22
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 688
+        width: 61
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: building_sheet_1_by_zetavares852_23
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 688
+        width: 144
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: building_sheet_1_by_zetavares852_24
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 688
+        width: 136
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: building_sheet_1_by_zetavares852_25
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 688
+        width: 205
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: building_sheet_1_by_zetavares852_26
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 704
+        width: 80
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: building_sheet_1_by_zetavares852_27
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 701
+        width: 119
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: building_sheet_1_by_zetavares852_28
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 495
+        width: 136
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: building_sheet_1_by_zetavares852_29
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 480
+        width: 76
+        height: 201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: building_sheet_1_by_zetavares852_30
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 480
+        width: 60
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: building_sheet_1_by_zetavares852_31
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 494
+        width: 112
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: building_sheet_1_by_zetavares852_32
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 496
+        width: 108
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: building_sheet_1_by_zetavares852_33
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 617
+        width: 16
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: building_sheet_1_by_zetavares852_34
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 620
+        width: 48
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: building_sheet_1_by_zetavares852_35
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 512
+        width: 78
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: building_sheet_1_by_zetavares852_36
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 512
+        width: 176
+        height: 147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: building_sheet_1_by_zetavares852_37
+      rect:
+        serializedVersion: 2
+        x: 917
+        y: 528
+        width: 102
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: building_sheet_1_by_zetavares852_38
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 496
+        width: 124
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: building_sheet_1_by_zetavares852_39
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 270
+        width: 245
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: building_sheet_1_by_zetavares852_40
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 349
+        width: 192
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: building_sheet_1_by_zetavares852_41
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 384
+        width: 79
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: building_sheet_1_by_zetavares852_42
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 333
+        width: 50
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: building_sheet_1_by_zetavares852_43
+      rect:
+        serializedVersion: 2
+        x: 637
+        y: 383
+        width: 86
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: building_sheet_1_by_zetavares852_44
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 399
+        width: 64
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: building_sheet_1_by_zetavares852_45
+      rect:
+        serializedVersion: 2
+        x: 821
+        y: 399
+        width: 58
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: building_sheet_1_by_zetavares852_46
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 384
+        width: 64
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: building_sheet_1_by_zetavares852_47
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 400
+        width: 62
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: building_sheet_1_by_zetavares852_48
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 238
+        width: 176
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: building_sheet_1_by_zetavares852_49
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 224
+        width: 94
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: building_sheet_1_by_zetavares852_50
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 240
+        width: 240
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: building_sheet_1_by_zetavares852_51
+      rect:
+        serializedVersion: 2
+        x: 817
+        y: 304
+        width: 62
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: building_sheet_1_by_zetavares852_52
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 304
+        width: 64
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: building_sheet_1_by_zetavares852_53
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 304
+        width: 63
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: building_sheet_1_by_zetavares852_54
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 94
+        width: 240
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: building_sheet_1_by_zetavares852_55
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 80
+        width: 95
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: building_sheet_1_by_zetavares852_56
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 63
+        width: 157
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: building_sheet_1_by_zetavares852_57
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 80
+        width: 93
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: building_sheet_1_by_zetavares852_58
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 47
+        width: 96
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: building_sheet_1_by_zetavares852_59
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 7
+        width: 174
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
     outline: []
     physicsShape: []
   spritePackingTag: 

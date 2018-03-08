@@ -849,8 +849,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -1201, y: 18}
-  m_SizeDelta: {x: 1053.5, y: 60.1}
+  m_AnchoredPosition: {x: -1047.4, y: 18}
+  m_SizeDelta: {x: 910.9, y: 55.2}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1693065541
 MonoBehaviour:
@@ -927,9 +927,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -0.00493, y: 152.7}
-  m_SizeDelta: {x: 1219.9, y: 202.4}
-  m_Pivot: {x: 0.5, y: 0.75}
+  m_AnchoredPosition: {x: 0.0052549047, y: 159.43475}
+  m_SizeDelta: {x: 1066.3, y: 144.1}
+  m_Pivot: {x: 0.5, y: 1.1}
 --- !u!114 &1741239111
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1016,7 +1016,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 115}
+  m_AnchoredPosition: {x: -376, y: -107}
   m_SizeDelta: {x: 295, y: 78}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1743615520
@@ -1134,7 +1134,7 @@ MonoBehaviour:
     sentences:
     - '... '
     - "O\xF9 suis-je ?"
-    - Il n'y a personne ici
+    - Il n'y a personne ici.
 --- !u!1 &1845476595
 GameObject:
   m_ObjectHideFlags: 0
@@ -1166,9 +1166,9 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -14.6, y: 12}
-  m_SizeDelta: {x: -67, y: -166.5}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 518.4, y: 108}
+  m_SizeDelta: {x: 999, y: 35.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1845476597
 MonoBehaviour:

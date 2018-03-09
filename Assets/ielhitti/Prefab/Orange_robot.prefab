@@ -1,0 +1,130 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1957100446000732}
+  m_IsPrefabParent: 1
+--- !u!1 &1957100446000732
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4116633263635228}
+  - component: {fileID: 212329713759272656}
+  - component: {fileID: 114195918700090300}
+  - component: {fileID: 114982222373836074}
+  m_Layer: 0
+  m_Name: Orange_robot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4116633263635228
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1957100446000732}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.98399, y: 1.3210052, z: 0}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114195918700090300
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1957100446000732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0be836c336b0b4f1cb8150de0f08ee42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  acceleration: 8
+  maxSpeed: 4
+  currentSpeed: {x: 0, y: 0, z: 0}
+--- !u!114 &114982222373836074
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1957100446000732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad0b874b850f941abbfb8c15a4f8da1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imagesParSecondes: 12
+  anims:
+  - name: Idle
+    sprites:
+    - {fileID: 21300000, guid: 4c88a9e386e85453d8ae482d460ae5a1, type: 3}
+    - {fileID: 21300000, guid: eb1334e36055e40c4a9b5f966c660eea, type: 3}
+    - {fileID: 21300000, guid: da554fc53a89641d5a1115a21041defa, type: 3}
+    - {fileID: 21300000, guid: 23e904e6db813499285e49344e78735b, type: 3}
+    - {fileID: 21300000, guid: 03af18d7f110f4a349dd0251bf78a260, type: 3}
+  - name: Run
+    sprites:
+    - {fileID: 21300000, guid: 31c2b6e0ec773402a97e3ad51941b43b, type: 3}
+    - {fileID: 21300000, guid: 4f83a2ffaffa347f093011ec13e1c4f3, type: 3}
+    - {fileID: 21300000, guid: 63382f830c9734d78903c7540a540343, type: 3}
+    - {fileID: 21300000, guid: ad662b60330d041d9b9cbc9da1dd3c19, type: 3}
+    - {fileID: 21300000, guid: b571cbfa2350b4653ba153786a4054f6, type: 3}
+    - {fileID: 21300000, guid: 566c5e9e510d44cf7adb714949d45713, type: 3}
+--- !u!212 &212329713759272656
+SpriteRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1957100446000732}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: dcd48842809c04cc3a15cbca9ec68e37, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 7, y: 12.16}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0

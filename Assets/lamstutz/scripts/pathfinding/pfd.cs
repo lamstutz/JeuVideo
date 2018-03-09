@@ -6,7 +6,7 @@ using UnityEngine;
 namespace pathfinding {
 
     public class AStar {
-        public static List<Vector2Int> FindPath (Vector2Int origin, Vector2Int targetCell, Func<Vector2Int, bool> Collide) {
+        public static List<Vector2Int> FindPath (Vector2Int origin, Vector2Int targetCell, Func<Vector2Int, bool> Collide, Vector2 originV2, Vector2 targetCellV2) {
             List<Node> fermee = new List<Node> ();
             SortedList<float, Node> ouverte = new SortedList<float, Node> (new DuplicateKeyComparer<float> ());
 
@@ -14,13 +14,16 @@ namespace pathfinding {
             depart.cout = 0;
             ouverte.Add (depart.GetFCost (), depart);
             int loopCount = 0;
-            while (ouverte.Count > 0 && loopCount < 1000) {
+            while (ouverte.Count > 0 && loopCount < 2500) {
+
                 loopCount ++;
                 Node current = ouverte.First ().Value;
                 ouverte.RemoveAt (0);
                 fermee.Add (current);
-
-                if (current.position == targetCell) return MakePathFromLastNode (current, new List<Vector2Int> ());
+//if (current.position == targetCell)
+                if (Vector2Int.Distance(current.position, targetCell) <= 2.0f ){
+                    return MakePathFromLastNode (current, new List<Vector2Int> ());
+                } 
 
                 Node[] voisins = CreateAvailableNeighbours (current, targetCell, fermee);
                 foreach (Node voisin in voisins) {
@@ -36,6 +39,7 @@ namespace pathfinding {
                 }
                 fermee.Add (current);
             }
+
 
             return null;
         }

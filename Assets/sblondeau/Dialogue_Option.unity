@@ -235,8 +235,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -387, y: 43}
-  m_SizeDelta: {x: 144, y: 50}
+  m_AnchoredPosition: {x: -332.1, y: 43}
+  m_SizeDelta: {x: 253.9, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &773008030
 MonoBehaviour:
@@ -368,7 +368,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Attendre
+  m_Text: Une direction
 --- !u!222 &775000378
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -446,7 +446,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Partir
+  m_Text: Plus d'information
 --- !u!222 &1129368863
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -490,7 +490,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: -695.02686, y: 43}
-  m_SizeDelta: {x: 144, y: 50}
+  m_SizeDelta: {x: 253.9, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1594201998
 MonoBehaviour:
@@ -559,6 +559,31 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114594332233479544, guid: 5de351dad9e9d0f4b8799b6fecabe532,
+        type: 2}
+      propertyPath: dialogues.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114594332233479544, guid: 5de351dad9e9d0f4b8799b6fecabe532,
+        type: 2}
+      propertyPath: dialogues.Array.data[0].sentences.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114594332233479544, guid: 5de351dad9e9d0f4b8799b6fecabe532,
+        type: 2}
+      propertyPath: dialogues.Array.data[1].sentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114594332233479544, guid: 5de351dad9e9d0f4b8799b6fecabe532,
+        type: 2}
+      propertyPath: dialogues.Array.data[2].sentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114594332233479544, guid: 5de351dad9e9d0f4b8799b6fecabe532,
+        type: 2}
+      propertyPath: dialogues.Array.data[3].sentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4940701026624154, guid: 5de351dad9e9d0f4b8799b6fecabe532, type: 2}
       propertyPath: m_LocalPosition.x
       value: 404.20712
@@ -643,6 +668,76 @@ Prefab:
     - target: {fileID: 1689657201749240, guid: 5de351dad9e9d0f4b8799b6fecabe532, type: 2}
       propertyPath: m_TagString
       value: continue
+      objectReference: {fileID: 0}
+    - target: {fileID: 223052498411038066, guid: 5de351dad9e9d0f4b8799b6fecabe532,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114594332233479544, guid: 5de351dad9e9d0f4b8799b6fecabe532,
+        type: 2}
+      propertyPath: dialogues.Array.data[0].name
+      value: Policier
+      objectReference: {fileID: 0}
+    - target: {fileID: 114594332233479544, guid: 5de351dad9e9d0f4b8799b6fecabe532,
+        type: 2}
+      propertyPath: dialogues.Array.data[1].name
+      value: Nao
+      objectReference: {fileID: 0}
+    - target: {fileID: 114594332233479544, guid: 5de351dad9e9d0f4b8799b6fecabe532,
+        type: 2}
+      propertyPath: dialogues.Array.data[2].name
+      value: Policier
+      objectReference: {fileID: 0}
+    - target: {fileID: 114594332233479544, guid: 5de351dad9e9d0f4b8799b6fecabe532,
+        type: 2}
+      propertyPath: dialogues.Array.data[3].name
+      value: Nao
+      objectReference: {fileID: 0}
+    - target: {fileID: 114594332233479544, guid: 5de351dad9e9d0f4b8799b6fecabe532,
+        type: 2}
+      propertyPath: dialogues.Array.data[0].sentences.Array.data[0]
+      value: "Hey, robot qu\u2019est ce que tu fais l\xE0 ?\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114594332233479544, guid: 5de351dad9e9d0f4b8799b6fecabe532,
+        type: 2}
+      propertyPath: dialogues.Array.data[0].sentences.Array.data[1]
+      value: "Tu n\u2019as rien \xE0 faire seul ici.\r\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114594332233479544, guid: 5de351dad9e9d0f4b8799b6fecabe532,
+        type: 2}
+      propertyPath: dialogues.Array.data[1].sentences.Array.data[0]
+      value: "Je ne sais pas, O\xF9 suis-je ?\r\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114594332233479544, guid: 5de351dad9e9d0f4b8799b6fecabe532,
+        type: 2}
+      propertyPath: dialogues.Array.data[2].sentences.Array.data[0]
+      value: "Dans la for\xEAt \xE0 proximit\xE9 de la ville \u201C404land\u201D."
+      objectReference: {fileID: 0}
+    - target: {fileID: 114594332233479544, guid: 5de351dad9e9d0f4b8799b6fecabe532,
+        type: 2}
+      propertyPath: dialogues.Array.data[3].sentences.Array.data[0]
+      value: "*Que demander \xE0 cette personne  ?*"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114594332233479544, guid: 5de351dad9e9d0f4b8799b6fecabe532,
+        type: 2}
+      propertyPath: dialogues.Array.data[1].sentences.Array.data[1]
+      value: "Tu n\u2019as rien \xE0 faire seul ici."
+      objectReference: {fileID: 0}
+    - target: {fileID: 114594332233479544, guid: 5de351dad9e9d0f4b8799b6fecabe532,
+        type: 2}
+      propertyPath: dialogues.Array.data[2].sentences.Array.data[1]
+      value: "Tu n\u2019as rien \xE0 faire seul ici."
+      objectReference: {fileID: 0}
+    - target: {fileID: 114594332233479544, guid: 5de351dad9e9d0f4b8799b6fecabe532,
+        type: 2}
+      propertyPath: dialogues.Array.data[3].sentences.Array.data[1]
+      value: "Tu n\u2019as rien \xE0 faire seul ici."
+      objectReference: {fileID: 0}
+    - target: {fileID: 114594332233479544, guid: 5de351dad9e9d0f4b8799b6fecabe532,
+        type: 2}
+      propertyPath: dialogues.Array.data[3].option
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5de351dad9e9d0f4b8799b6fecabe532, type: 2}

@@ -8,7 +8,7 @@ namespace pathfinding {
 		Une fonction de transformation est proposée pour changer de référentiel.
 		Les tilemap possèdent déjà ces fonctions.
 	 */
-	public class MyGrid : MonoBehaviour {
+	public class Grider : MonoBehaviour {
 
 		public float cellWidth = 0.5f;
 		public float cellHeight = 0.5f;

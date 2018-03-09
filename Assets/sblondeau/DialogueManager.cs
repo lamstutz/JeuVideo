@@ -16,6 +16,8 @@ public class DialogueManager : MonoBehaviour {
 	private GameObject[] gos;
 
 	private Vector3 otherPosn;
+
+	private Vector3 initPosn;
 	private Dialogue[] dialogues;
 
 	private bool option;
@@ -25,7 +27,7 @@ public class DialogueManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		sentences 	= new Queue<string>();
-		index = 0;
+		index 		= 0;
 	}
 
 	void cacherOption () {
@@ -52,12 +54,13 @@ public class DialogueManager : MonoBehaviour {
 
 		// On cache le bouton continue
 		gos = GameObject.FindGameObjectsWithTag("continue");
-		otherPosn = gos[0].transform.position;
-		gos[0].transform.position = new Vector3(otherPosn.x - 10000, otherPosn.y - 10000, otherPosn.z);
+		initPosn = gos[0].transform.position;
+		gos[0].transform.position = new Vector3(initPosn.x - 10000, initPosn.y - 10000, initPosn.z);
 	}
 
 	public void StartDialogue (Dialogue[] dialoguesV)
 	{
+		
 		// Garde les dialogues pour la suite
 		dialogues = dialoguesV;
 
@@ -123,6 +126,7 @@ public class DialogueManager : MonoBehaviour {
 		dialogueText.text = "";
 		foreach (char letter in sentence.ToCharArray())
 		{
+			SoundEffectsHelper.Instance.MakeLetterSound();
 			dialogueText.text += letter;
 			yield return null;
 		}

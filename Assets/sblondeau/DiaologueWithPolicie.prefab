@@ -55,8 +55,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4926202436986786}
   - component: {fileID: 114681948110715856}
+  - component: {fileID: 114156894043061420}
   m_Layer: 0
-  m_Name: DialogueManager
+  m_Name: Scripts
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -411,6 +412,18 @@ MonoBehaviour:
   m_InputActionsPerSecond: 10
   m_RepeatDelay: 0.5
   m_ForceModuleActive: 0
+--- !u!114 &114156894043061420
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1200728709726638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc48c6e1effbdf6449cf73b35e3caad9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  letterSound: {fileID: 8300000, guid: e2acc10f39c697c4b9527f3cd1b1454f, type: 3}
 --- !u!114 &114158548085161528
 MonoBehaviour:
   m_ObjectHideFlags: 1

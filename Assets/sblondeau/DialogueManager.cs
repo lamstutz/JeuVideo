@@ -126,7 +126,7 @@ public class DialogueManager : MonoBehaviour {
 		dialogueText.text = "";
 		foreach (char letter in sentence.ToCharArray())
 		{
-			SoundEffectsHelper.Instance.MakeLetterSound();
+			//SoundEffectsHelper.Instance.MakeLetterSound();
 			dialogueText.text += letter;
 			yield return null;
 		}

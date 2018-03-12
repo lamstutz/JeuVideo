@@ -7,19 +7,23 @@ using UnityEngine;
 
 public class OnClickFindPathAndMove : MonoBehaviour {
 
-	public Grider grid;
+
 	public Transform objectToMove;
 	public Transform targetObject;
-	public Polyline currentPath;
 	public Collider2D pathCollider;
 
-	public Vector3? moveTo;
-
+	private Vector3? moveTo;
+	private bool fin; 
+	private Polyline currentPath;
+	private Grider grid;
 	private Vector2 currentTarget;
 	private Vector2 targetV2;
-	private bool fin; 
 
-	void Start() { }
+	void Start() { 
+		print("START PATHFINDING");
+		grid = GameObject.Find("/trackerMove/grid").GetComponent<Grider>();
+		currentPath = GameObject.Find("/trackerMove/polyPath").GetComponent<Polyline>();
+	}
 
 	void Update() {
 		targetV2 = new Vector2(targetObject.position.x,targetObject.position.y);
@@ -28,19 +32,10 @@ public class OnClickFindPathAndMove : MonoBehaviour {
 			(currentTarget == null || (Vector2.Distance(targetV2, currentTarget) > 2.0f ))
 		) {
 			fin = false;
-			print("A");
-			print(targetV2);
-			print(currentTarget);
 			Vector3 origin = objectToMove.position;
 			var v3 = targetObject.position;
 			v3.z = 10.0f;
 			Vector3 target =  v3;
-
-			//print(target);
-			// var v3 = Input.mousePosition;
-			// v3.z = 10.0f;
-			// Vector3 targetCell = Camera.main.ScreenToWorldPoint(v3);
-
 			
 			var findedPath = AStar
 				.FindPath(grid.WorldToCell(origin), grid.WorldToCell(target), Collide,targetV2,currentTarget);
@@ -69,6 +64,7 @@ public class OnClickFindPathAndMove : MonoBehaviour {
 
 		if(!fin && currentPath.nodes.Count == 0 && (currentTarget != null || (Vector2.Distance(targetV2, currentTarget) <= 2.0f ) )){
 			fin = true;
+			print("FINISH PATHFINDING");
 		}
 	}
 

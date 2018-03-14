@@ -37,6 +37,8 @@ public class OnClickFindPathAndMove : MonoBehaviour {
 			v3.z = 10.0f;
 			Vector3 target =  v3;
 			
+			// SBO: utilisez plutôt l'objet tilemap de votre Grid pour faire les conversions, qui possède déjà WorldToCell, CellToWorld et une fonction
+			// pour connaitre l'état de la tuile (collidable ou non). Cf. explications sur le slack
 			var findedPath = AStar
 				.FindPath(grid.WorldToCell(origin), grid.WorldToCell(target), Collide,targetV2,currentTarget);
 
@@ -68,6 +70,7 @@ public class OnClickFindPathAndMove : MonoBehaviour {
 		}
 	}
 
+	
     private bool Collide(Vector2Int cellPos)
     {
         if (pathCollider == null) return false;

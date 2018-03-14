@@ -37,6 +37,9 @@ public class DialogueManager : MonoBehaviour {
 		foreach (GameObject go in gos)
 		{
 			otherPosn = go.transform.position;
+			// SBO: avec cette méthode, si "cacherOption" est appelé plusieurs fois il devient difficile de les retrouver
+			// autre méthode : mémoriser la position initiale avant de déplacer
+			// puis remettre cette position pour réapparaitre (plutôt que refaire l'opération inverse)
 			go.transform.position = new Vector3(otherPosn.x-10000, otherPosn.y-10000, otherPosn.z);
 		}
 	}
@@ -65,6 +68,7 @@ public class DialogueManager : MonoBehaviour {
 		dialogues = dialoguesV;
 
 		// Animation de la box
+		// SBO: l'animator pour faire glisser une boite de dialogue est un peu overkill mais pourquoi pas, ça fonctionne.
 		animator.SetBool("IsOpen", true);
 		// Cache les boutons de choix
 		cacherOption();

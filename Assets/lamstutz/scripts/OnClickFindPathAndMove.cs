@@ -65,9 +65,9 @@ public class OnClickFindPathAndMove : MonoBehaviour {
 				this.objectToMove.position = Vector2.MoveTowards(this.objectToMove.position, moveTo.Value, 0.05f);
 			}
 
-			if(!fin && currentPath.nodes.Count == 0 && (currentTarget != null || (Vector2.Distance(targetV2, currentTarget) <= 2.0f ) )){
+			if(!fin && currentPath.nodes.Count == 0 && (Vector2.Distance(targetV2, currentTarget) <= 2.0f ) ){
 				fin = true;
-				//ended = true;
+				ended = true;
 				print("FINISH PATHFINDING");
 			}
 		}

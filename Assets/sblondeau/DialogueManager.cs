@@ -23,13 +23,14 @@ public class DialogueManager : MonoBehaviour {
 	private int countT;
 	private Boolean optionvisible; // Vrai ils sont cliquable sinon non
 	private Boolean continuevisible; // Vrai ils sont cliquable sinon non
+	private int	touch;
 
 	// Use this for initialization
 	void Start () {
-		Debug.Log("Star");
 		sentences 		= new Queue<string>();
 		index 			= 0;
 		continuevisible = false;
+		touch			= 0;
 	}
 
 	void cacherOption () {
@@ -47,6 +48,7 @@ public class DialogueManager : MonoBehaviour {
 	}
 
 	void Update() {
+
 		// Si touche gauche et option activé
 		if(Input.GetKey("left") && optionvisible){
 			GameObject choix1 = GameObject.Find("Choix1");
@@ -58,16 +60,15 @@ public class DialogueManager : MonoBehaviour {
 			GameObject choix2 = GameObject.Find("Choix2");
 		}
 
-		// Touche a entré et space pour le bouton continue si visible
-		if((Input.GetKey("space") || (Input.GetKey(KeyCode.Return)) || Input.GetKey("a")) && continuevisible){
-			//gos = GameObject.FindGameObjectsWithTag("continue");
-			//Button btn = gos[0].GetComponent<Button>();
-       		//btn.onClick.Invoke();
-			Debug.Log("Début Touche activé");
-			DisplayNextSentence();
-			Debug.Log("Fin Touche activé");
-			return;
+		if(Input.GetKey("space") || (Input.GetKey(KeyCode.Return)) || Input.GetKey("a")){
+			touch++;
+		}else{
+			touch = 0;
+		}
 
+		// Touche a entré et space pour le bouton continue si visible
+		if((Input.GetKey("space") || (Input.GetKey(KeyCode.Return)) || Input.GetKey("a")) && continuevisible && touch == 1){
+			DisplayNextSentence();
 		}
 	}
 
@@ -92,7 +93,6 @@ public class DialogueManager : MonoBehaviour {
 
 	public void StartDialogue (Dialogue[] dialoguesV, string nomGO)
 	{
-		Debug.Log("StarDialogue");
 		// Garde les dialogues pour la suite
 		dialogues = dialoguesV;
 
@@ -128,7 +128,6 @@ public class DialogueManager : MonoBehaviour {
 
 	public void DisplayNextSentence ()
 	{
-		Debug.Log("DisplayNextSentence");
 		if (sentences.Count == 0)
 		{
 			// S'il y a des options, affichage de ces derniers
@@ -190,4 +189,22 @@ public class DialogueManager : MonoBehaviour {
 		return;
 	}
 
+	void choixDialogue(string nom){
+		// Selon le nom du GameObject, le dialogue sera différent
+		switch (nom)
+		{
+			case "Policie":
+				// Premier dialogue du policier
+				break;
+			case "Policie_1":
+				// Réponse au choix 1 par le policier
+				break;
+			case "Policie_2":
+				// Réponse au choix 2 par le policier
+				break;
+			default:
+				// Script de lancement
+				break;
+		}
+	}
 }

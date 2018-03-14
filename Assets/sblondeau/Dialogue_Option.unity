@@ -113,23 +113,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &317425243 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1200728709726638, guid: 4ead5f04644e69646adcf51a5f82d8a4,
-    type: 2}
-  m_PrefabInternal: {fileID: 1686784922}
---- !u!114 &317425245
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 317425243}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc48c6e1effbdf6449cf73b35e3caad9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  letterSound: {fileID: 8300000, guid: e2acc10f39c697c4b9527f3cd1b1454f, type: 3}
 --- !u!1 &685169713
 GameObject:
   m_ObjectHideFlags: 0
@@ -250,9 +233,20 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1200728709726638, guid: 4ead5f04644e69646adcf51a5f82d8a4, type: 2}
-      propertyPath: m_Name
-      value: Scripts
+    - target: {fileID: 114866771712127576, guid: 4ead5f04644e69646adcf51a5f82d8a4,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0.9490701
+      objectReference: {fileID: 0}
+    - target: {fileID: 114866771712127576, guid: 4ead5f04644e69646adcf51a5f82d8a4,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0.9532708
+      objectReference: {fileID: 0}
+    - target: {fileID: 114866771712127576, guid: 4ead5f04644e69646adcf51a5f82d8a4,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0.9632353
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4ead5f04644e69646adcf51a5f82d8a4, type: 2}

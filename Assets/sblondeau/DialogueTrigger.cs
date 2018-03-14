@@ -6,10 +6,11 @@ using UnityEngine;
 public class DialogueTrigger : MonoBehaviour {
 
 	public Dialogue[] dialogues;
+	public string nomGO;
 
 	public void TriggerDialogue ()
 	{
-		FindObjectOfType<DialogueManager>().StartDialogue(dialogues);
+		FindObjectOfType<DialogueManager>().StartDialogue(dialogues, nomGO);
 	}
 
 }

@@ -11,28 +11,33 @@ public class DialogueManager : MonoBehaviour {
 
 	public Animator animator;
 
+	public GUIStyle buttonBorderStyle;
+
 	private Queue<string> sentences;
-
 	private GameObject[] gos;
-
 	private Vector3 otherPosn;
-
 	private Vector3 initPosn;
 	private Dialogue[] dialogues;
-
 	private bool option;
 	private int index;
 	private int countT;
+	private Boolean optionvisible; // Vrai ils sont cliquable sinon non
+	private Boolean continuevisible; // Vrai ils sont cliquable sinon non
 
 	// Use this for initialization
 	void Start () {
-		sentences 	= new Queue<string>();
-		index 		= 0;
+		Debug.Log("Star");
+		sentences 		= new Queue<string>();
+		index 			= 0;
+		continuevisible = false;
 	}
 
 	void cacherOption () {
-		gos = GameObject.FindGameObjectsWithTag("choix");
-		otherPosn = gos[0].transform.position;
+
+		// Indicateur de visibilité des options.
+		optionvisible 	= false;
+		gos 		= GameObject.FindGameObjectsWithTag("choix");
+		otherPosn 	= gos[0].transform.position;
 
 		foreach (GameObject go in gos)
 		{
@@ -41,9 +46,35 @@ public class DialogueManager : MonoBehaviour {
 		}
 	}
 
+	void Update() {
+		// Si touche gauche et option activé
+		if(Input.GetKey("left") && optionvisible){
+			GameObject choix1 = GameObject.Find("Choix1");
+			GameObject choix2 = GameObject.Find("Choix2");
+		}
+
+		if(Input.GetKey("right") && optionvisible){
+			GameObject choix1 = GameObject.Find("Choix1");
+			GameObject choix2 = GameObject.Find("Choix2");
+		}
+
+		// Touche a entré et space pour le bouton continue si visible
+		if((Input.GetKey("space") || (Input.GetKey(KeyCode.Return)) || Input.GetKey("a")) && continuevisible){
+			//gos = GameObject.FindGameObjectsWithTag("continue");
+			//Button btn = gos[0].GetComponent<Button>();
+       		//btn.onClick.Invoke();
+			Debug.Log("Début Touche activé");
+			DisplayNextSentence();
+			Debug.Log("Fin Touche activé");
+			return;
+
+		}
+	}
+
 	void afficherOption () {
+		// Les options sont affichés et cliquable
+		optionvisible = true;
 		gos = GameObject.FindGameObjectsWithTag("choix");
-		
 		otherPosn = gos[0].transform.position;
 
 		foreach (GameObject go in gos)
@@ -53,19 +84,21 @@ public class DialogueManager : MonoBehaviour {
 		}
 
 		// On cache le bouton continue
+		continuevisible = false;
 		gos = GameObject.FindGameObjectsWithTag("continue");
 		initPosn = gos[0].transform.position;
 		gos[0].transform.position = new Vector3(initPosn.x - 10000, initPosn.y - 10000, initPosn.z);
 	}
 
-	public void StartDialogue (Dialogue[] dialoguesV)
+	public void StartDialogue (Dialogue[] dialoguesV, string nomGO)
 	{
-		
+		Debug.Log("StarDialogue");
 		// Garde les dialogues pour la suite
 		dialogues = dialoguesV;
 
 		// Animation de la box
 		animator.SetBool("IsOpen", true);
+
 		// Cache les boutons de choix
 		cacherOption();
 
@@ -73,6 +106,8 @@ public class DialogueManager : MonoBehaviour {
 		nameText.text   = dialogues[index].name;	// Nom de personnage
 		countT 			= dialogues.Length;			// Nombre de dialogue		
 		
+		continuevisible = true;
+
 		ParcoursText();
 
 		DisplayNextSentence();
@@ -80,6 +115,7 @@ public class DialogueManager : MonoBehaviour {
 	}
 
 	void ParcoursText(){
+		Debug.Log("ParcoursText");
 		// Vide la queue des textes
 		sentences.Clear();
 
@@ -92,6 +128,7 @@ public class DialogueManager : MonoBehaviour {
 
 	public void DisplayNextSentence ()
 	{
+		Debug.Log("DisplayNextSentence");
 		if (sentences.Count == 0)
 		{
 			// S'il y a des options, affichage de ces derniers
@@ -115,14 +152,16 @@ public class DialogueManager : MonoBehaviour {
 			}
 
 		}else{
+			Debug.Log("sentences dequeue");
 			string sentence = sentences.Dequeue();
 			StopAllCoroutines();
 			StartCoroutine(TypeSentence(sentence));
-		}		
+		}	
 	}
 
 	IEnumerator TypeSentence (string sentence)
 	{
+		Debug.Log("TypeSentece");
 		dialogueText.text = "";
 		foreach (char letter in sentence.ToCharArray())
 		{

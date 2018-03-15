@@ -928,11 +928,6 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 5
---- !u!19719996 &841035978 stripped
-TilemapCollider2D:
-  m_PrefabParentObject: {fileID: 2113883505790045924, guid: 433598ae7a2a641419584960aae6faf1,
-    type: 2}
-  m_PrefabInternal: {fileID: 86949391}
 --- !u!1 &858036168
 GameObject:
   m_ObjectHideFlags: 0
@@ -1643,7 +1638,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1548367078
 Transform:
   m_ObjectHideFlags: 0

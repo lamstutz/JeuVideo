@@ -53,11 +53,13 @@ public class DialogueManager : MonoBehaviour {
 		if(Input.GetKey("left") && optionvisible){
 			GameObject choix1 = GameObject.Find("Choix1");
 			GameObject choix2 = GameObject.Find("Choix2");
+			choix1.GetComponent<Button>().Select();
 		}
 
 		if(Input.GetKey("right") && optionvisible){
 			GameObject choix1 = GameObject.Find("Choix1");
 			GameObject choix2 = GameObject.Find("Choix2");
+			choix2.GetComponent<Button>().Select();
 		}
 
 		if(Input.GetKey("space") || (Input.GetKey(KeyCode.Return)) || Input.GetKey("a")){

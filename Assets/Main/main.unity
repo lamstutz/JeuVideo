@@ -1326,8 +1326,8 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &1405326693
-BoxCollider2D:
+--- !u!68 &1405326693
+EdgeCollider2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -1339,18 +1339,11 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_EdgeRadius: 0.1
+  m_Points:
+  - {x: 0.1595963, y: -0.5028336}
+  - {x: 1.1596906, y: -0.075818844}
+  - {x: 5.7209725, y: -0.07461849}
 --- !u!4 &1405326694
 Transform:
   m_ObjectHideFlags: 0
@@ -1358,7 +1351,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1405326692}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.03, y: 0.02, z: -0.13766375}
+  m_LocalPosition: {x: -4.76, y: 0.34, z: -0.13766375}
   m_LocalScale: {x: 1.5106051, y: 27.053698, z: 1.2206916}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1993,7 +1986,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1844960037
+  randomSeed: -595453217
   InitialModule:
     serializedVersion: 3
     enabled: 1

@@ -148,25 +148,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00ddd33eae28b5148a72170d47ccd942, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogues:
-  - name: Policier
-    sentences:
-    - Hey, robot qu'est ce que tu fais la ?
-    - Tu n'a rien a faire seule ici.
-    option: 0
-  - name: Nao
-    sentences:
-    - Je ne sais pas, ou suis-je ?
-    option: 0
-  - name: Policier
-    sentences:
-    - Dans la foret a proximite de la ville "404land".
-    option: 0
-  - name: Nao
-    sentences:
-    - '*Que demander a cette personne ?*'
-    option: 1
-  nomGO: 
 --- !u!114 &119397136
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -323,7 +304,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 119397134}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 14.8, y: 2.7999997, z: 0}
+  m_LocalPosition: {x: 6.6, y: -10.34, z: 0}
   m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -663,124 +644,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 8195094281672464692, guid: 433598ae7a2a641419584960aae6faf1,
-        type: 2}
-      propertyPath: m_Tiles.Array.data[3600].second.m_TileSpriteIndex
-      value: 55
-      objectReference: {fileID: 0}
-    - target: {fileID: 8195094281672464692, guid: 433598ae7a2a641419584960aae6faf1,
-        type: 2}
-      propertyPath: m_Tiles.Array.data[3601].second.m_TileSpriteIndex
-      value: 54
-      objectReference: {fileID: 0}
-    - target: {fileID: 8195094281672464692, guid: 433598ae7a2a641419584960aae6faf1,
-        type: 2}
-      propertyPath: m_Tiles.Array.data[3602].second.m_TileSpriteIndex
-      value: 53
-      objectReference: {fileID: 0}
-    - target: {fileID: 8195094281672464692, guid: 433598ae7a2a641419584960aae6faf1,
-        type: 2}
-      propertyPath: m_Tiles.Array.data[4141].second.m_TileSpriteIndex
-      value: 52
-      objectReference: {fileID: 0}
-    - target: {fileID: 8195094281672464692, guid: 433598ae7a2a641419584960aae6faf1,
-        type: 2}
-      propertyPath: m_Tiles.Array.data[4142].second.m_TileSpriteIndex
-      value: 51
-      objectReference: {fileID: 0}
-    - target: {fileID: 8195094281672464692, guid: 433598ae7a2a641419584960aae6faf1,
-        type: 2}
-      propertyPath: m_Tiles.Array.data[4143].second.m_TileSpriteIndex
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 8195094281672464692, guid: 433598ae7a2a641419584960aae6faf1,
-        type: 2}
-      propertyPath: m_Tiles.Array.data[4409].second.m_TileSpriteIndex
-      value: 49
-      objectReference: {fileID: 0}
-    - target: {fileID: 8195094281672464692, guid: 433598ae7a2a641419584960aae6faf1,
-        type: 2}
-      propertyPath: m_Tiles.Array.data[4543].second.m_TileSpriteIndex
-      value: 48
-      objectReference: {fileID: 0}
-    - target: {fileID: 8195094281672464692, guid: 433598ae7a2a641419584960aae6faf1,
-        type: 2}
-      propertyPath: m_TileSpriteArray.Array.data[46].m_RefCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8195094281672464692, guid: 433598ae7a2a641419584960aae6faf1,
-        type: 2}
-      propertyPath: m_TileSpriteArray.Array.data[46].m_Data
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8195094281672464692, guid: 433598ae7a2a641419584960aae6faf1,
-        type: 2}
-      propertyPath: m_TileSpriteArray.Array.data[47].m_RefCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8195094281672464692, guid: 433598ae7a2a641419584960aae6faf1,
-        type: 2}
-      propertyPath: m_TileSpriteArray.Array.data[47].m_Data
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8195094281672464692, guid: 433598ae7a2a641419584960aae6faf1,
-        type: 2}
-      propertyPath: m_TileSpriteArray.Array.data[48].m_Data
-      value: 
-      objectReference: {fileID: 21300488, guid: 8d580fe8fef6936448b4f788ddc5425b,
-        type: 3}
-    - target: {fileID: 8195094281672464692, guid: 433598ae7a2a641419584960aae6faf1,
-        type: 2}
-      propertyPath: m_TileSpriteArray.Array.data[49].m_Data
-      value: 
-      objectReference: {fileID: 21300520, guid: 8d580fe8fef6936448b4f788ddc5425b,
-        type: 3}
-    - target: {fileID: 8195094281672464692, guid: 433598ae7a2a641419584960aae6faf1,
-        type: 2}
-      propertyPath: m_TileSpriteArray.Array.data[50].m_Data
-      value: 
-      objectReference: {fileID: 21300086, guid: 8d580fe8fef6936448b4f788ddc5425b,
-        type: 3}
-    - target: {fileID: 8195094281672464692, guid: 433598ae7a2a641419584960aae6faf1,
-        type: 2}
-      propertyPath: m_TileSpriteArray.Array.data[51].m_Data
-      value: 
-      objectReference: {fileID: 21300084, guid: 8d580fe8fef6936448b4f788ddc5425b,
-        type: 3}
-    - target: {fileID: 8195094281672464692, guid: 433598ae7a2a641419584960aae6faf1,
-        type: 2}
-      propertyPath: m_TileSpriteArray.Array.data[52].m_Data
-      value: 
-      objectReference: {fileID: 21300022, guid: 8d580fe8fef6936448b4f788ddc5425b,
-        type: 3}
-    - target: {fileID: 8195094281672464692, guid: 433598ae7a2a641419584960aae6faf1,
-        type: 2}
-      propertyPath: m_TileSpriteArray.Array.data[53].m_Data
-      value: 
-      objectReference: {fileID: 21300052, guid: 8d580fe8fef6936448b4f788ddc5425b,
-        type: 3}
-    - target: {fileID: 8195094281672464692, guid: 433598ae7a2a641419584960aae6faf1,
-        type: 2}
-      propertyPath: m_TileSpriteArray.Array.data[54].m_RefCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8195094281672464692, guid: 433598ae7a2a641419584960aae6faf1,
-        type: 2}
-      propertyPath: m_TileSpriteArray.Array.data[54].m_Data
-      value: 
-      objectReference: {fileID: 21300180, guid: 8d580fe8fef6936448b4f788ddc5425b,
-        type: 3}
-    - target: {fileID: 8195094281672464692, guid: 433598ae7a2a641419584960aae6faf1,
-        type: 2}
-      propertyPath: m_TileSpriteArray.Array.data[55].m_RefCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8195094281672464692, guid: 433598ae7a2a641419584960aae6faf1,
-        type: 2}
-      propertyPath: m_TileSpriteArray.Array.data[55].m_Data
-      value: 
-      objectReference: {fileID: 21300176, guid: 8d580fe8fef6936448b4f788ddc5425b,
-        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 433598ae7a2a641419584960aae6faf1, type: 2}
   m_IsPrefabParent: 0
@@ -1395,8 +1258,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1405326694}
-  - component: {fileID: 1405326693}
   - component: {fileID: 1405326695}
+  - component: {fileID: 1405326693}
   m_Layer: 0
   m_Name: copTrigger
   m_TagString: Untagged
@@ -1436,8 +1299,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1405326692}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.41, y: -4, z: -0.13766375}
-  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_LocalPosition: {x: -5.03, y: 0.02, z: -0.13766375}
+  m_LocalScale: {x: 1.5106051, y: 27.053698, z: 1.2206916}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
@@ -1467,7 +1330,7 @@ MonoBehaviour:
           m_StringArgument: police_man|Grey_robot|dialogue
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1405326693}
+      - m_Target: {fileID: 1405326695}
         m_MethodName: set_enabled
         m_Mode: 6
         m_Arguments:
@@ -1716,7 +1579,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1548367078
 Transform:
   m_ObjectHideFlags: 0
@@ -1957,8 +1820,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00ddd33eae28b5148a72170d47ccd942, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogues: []
-  nomGO: 
 --- !u!199 &1877018324
 ParticleSystemRenderer:
   serializedVersion: 4
@@ -1974,7 +1835,7 @@ ParticleSystemRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31188fb063fd87247a4d29b5c2f84e63, type: 2}
+  - {fileID: 2100000, guid: 47694e945e4ea8b4ba8925b78d1c33cc, type: 2}
   - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -1994,14 +1855,14 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_RenderMode: 0
+  m_SortingOrder: 3
+  m_RenderMode: 1
   m_SortMode: 0
   m_MinParticleSize: 0
-  m_MaxParticleSize: 0.5
+  m_MaxParticleSize: 1
   m_CameraVelocityScale: 0
   m_VelocityScale: 0
-  m_LengthScale: 2
+  m_LengthScale: 4
   m_SortingFudge: 0
   m_NormalDirection: 1
   m_RenderAlignment: 0
@@ -2028,7 +1889,7 @@ ParticleSystem:
   playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
-  useRigidbodyForVelocity: 1
+  useRigidbodyForVelocity: 0
   startDelay:
     serializedVersion: 2
     minMaxState: 0
@@ -2073,14 +1934,14 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 269976502
+  randomSeed: -1246825477
   InitialModule:
     serializedVersion: 3
     enabled: 1
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 1
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -2348,7 +2209,7 @@ ParticleSystem:
     startRotationX:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 3.1415925
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -2389,7 +2250,7 @@ ParticleSystem:
     startRotationY:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 3.1415927
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -2469,7 +2330,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 1000
+    maxNumParticles: 1
     size3D: 0
     rotation3D: 0
     gravityModifier:
@@ -2516,16 +2377,16 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 5
     enabled: 1
-    type: 0
+    type: 10
     angle: 25
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
     donutRadius: 0.2
-    m_Position: {x: 0, y: 0, z: 0}
+    m_Position: {x: 2, y: -5, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
-    m_Scale: {x: 1, y: 1, z: 1}
-    placementMode: 0
+    m_Scale: {x: 1, y: 4.21397, z: 2.156755}
+    placementMode: 1
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0
     m_Mesh: {fileID: 0}
@@ -2538,7 +2399,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 1
+      value: 0.01
       mode: 0
       spread: 0
       speed:
@@ -2583,7 +2444,7 @@ ParticleSystem:
           m_PostInfinity: 2
           m_RotationOrder: 4
     arc:
-      value: 360
+      value: 0
       mode: 0
       spread: 0
       speed:
@@ -2927,7 +2788,7 @@ ParticleSystem:
     curve:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.7853982
+      scalar: 0.7853981
       minScalar: 0.7853982
       maxCurve:
         serializedVersion: 2

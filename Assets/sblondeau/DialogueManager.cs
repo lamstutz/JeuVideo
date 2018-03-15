@@ -244,6 +244,12 @@ public class DialogueManager : MonoBehaviour {
 		// Selon le nom du GameObject, le dialogue sera différent
 		switch (nom)
 		{
+			case "Nao":
+				// Script de lancement
+				sentences  = new String[] {"Où suis-je ?", "Il n'y a rien ici.", "Je devrais aller trouver des informations."};
+				unDialogue = new Dialogue("...", sentences, false);
+				dialogues.Add(unDialogue);
+				break;
 			case "police_man":
 				// Premier dialogue du policier
 				// Interaction avec le policier
@@ -251,7 +257,7 @@ public class DialogueManager : MonoBehaviour {
 				unDialogue = new Dialogue("Policier", sentences, false);
 				dialogues.Add(unDialogue);
 				// Réponse de Nao
-				sentences  = new String[] {"Je ne sais pas, Où suis-je ?" };
+				sentences  = new String[] {"Bonjour humain. Je m'appelle Nao.", "Je suis perdu. Où suis-je ?" };
 				unDialogue = new Dialogue("Nao", sentences, false);
 				dialogues.Add(unDialogue);
 				// Réponse du policier
@@ -285,12 +291,20 @@ public class DialogueManager : MonoBehaviour {
 				unDialogue = new Dialogue("Policier", sentences, false);
 				dialogues.Add(unDialogue);
 				break;
-			case "Nao":
-				// Script de lancement
-				sentences  = new String[] {"Où suis-je ?", "Il n'y a personne ici.", "Je devrais aller trouver des informations."};
+			
+			case "Girl":
+				// Dialogue avec la petite fille
+				sentences  = new String[] {"Snif sninf...","J'ai perdu mon ballon..."};
 				unDialogue = new Dialogue("...", sentences, false);
 				dialogues.Add(unDialogue);
 				break;
+			case "EntrerVille":
+				// Dialogue avec la petite fille
+				sentences  = new String[] {"Voila la ville. On pourra me donner des indications.", "Je ne devrais pas être là pourtant j'y suis"};
+				unDialogue = new Dialogue("...", sentences, false);
+				dialogues.Add(unDialogue);
+				break;
+				
 		}
 	}
 }

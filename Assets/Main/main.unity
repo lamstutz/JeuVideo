@@ -1478,7 +1478,7 @@ GameObject:
   - component: {fileID: 1433442768}
   - component: {fileID: 1433442771}
   m_Layer: 0
-  m_Name: Idle (1)
+  m_Name: girl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1495,25 +1495,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad0b874b850f941abbfb8c15a4f8da1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imagesParSecondes: 2
+  imagesParSecondes: 12
   anims:
   - name: Idle
     sprites:
     - {fileID: 21300000, guid: 92768ee0596d74487aeb51ebbe978bb7, type: 3}
     - {fileID: 21300000, guid: 0880f574b8a0a4f66a6e6d1b0b7c9752, type: 3}
-    - {fileID: 21300000, guid: 45897aec3ca124a79b5bcba0a85a220a, type: 3}
     - {fileID: 21300000, guid: cb567cfbaa07f47a4a56263fb5e0e293, type: 3}
     - {fileID: 21300000, guid: 3dca31bbf25e74725af9090b8d903cbe, type: 3}
     - {fileID: 21300000, guid: 5cf21f5f3d8cb4654a04f16ee12d1f0a, type: 3}
     - {fileID: 21300000, guid: cc1da1968412343389f41c98b005bc16, type: 3}
-    - {fileID: 21300000, guid: 6aafd6cdafeca481ebd9e5aaaa6976d6, type: 3}
     - {fileID: 21300000, guid: fa0a6f40af0674a7389cd0ec8482011d, type: 3}
     - {fileID: 21300000, guid: b29a8ecff06274a579f6276a795c0e5c, type: 3}
     - {fileID: 21300000, guid: ea9177b48c91a4672b9fd2c1cfcd6b7f, type: 3}
     - {fileID: 21300000, guid: 2fde38b33e519483590b88a6fa40bf65, type: 3}
-    - {fileID: 21300000, guid: 846432c1700b6457ca485f6e1be57836, type: 3}
     - {fileID: 21300000, guid: 49b10ffc9a6054075ab7e20281a4e504, type: 3}
-    - {fileID: 21300000, guid: cbd574bb2936e467b9c24bb0bc7471b9, type: 3}
     - {fileID: 21300000, guid: 0996bb625692c48a39be051e1a34f586, type: 3}
 --- !u!212 &1433442769
 SpriteRenderer:
@@ -1548,7 +1544,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 92768ee0596d74487aeb51ebbe978bb7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

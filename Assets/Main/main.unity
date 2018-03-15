@@ -245,7 +245,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -1}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -254,9 +254,9 @@ BoxCollider2D:
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_AutoTiling: 1
   serializedVersion: 2
-  m_Size: {x: 5, y: 10}
+  m_Size: {x: 5, y: 5}
   m_EdgeRadius: 0
 --- !u!212 &119397139
 SpriteRenderer:
@@ -663,6 +663,124 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 8195094281672464692, guid: 433598ae7a2a641419584960aae6faf1,
+        type: 2}
+      propertyPath: m_Tiles.Array.data[3600].second.m_TileSpriteIndex
+      value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 8195094281672464692, guid: 433598ae7a2a641419584960aae6faf1,
+        type: 2}
+      propertyPath: m_Tiles.Array.data[3601].second.m_TileSpriteIndex
+      value: 54
+      objectReference: {fileID: 0}
+    - target: {fileID: 8195094281672464692, guid: 433598ae7a2a641419584960aae6faf1,
+        type: 2}
+      propertyPath: m_Tiles.Array.data[3602].second.m_TileSpriteIndex
+      value: 53
+      objectReference: {fileID: 0}
+    - target: {fileID: 8195094281672464692, guid: 433598ae7a2a641419584960aae6faf1,
+        type: 2}
+      propertyPath: m_Tiles.Array.data[4141].second.m_TileSpriteIndex
+      value: 52
+      objectReference: {fileID: 0}
+    - target: {fileID: 8195094281672464692, guid: 433598ae7a2a641419584960aae6faf1,
+        type: 2}
+      propertyPath: m_Tiles.Array.data[4142].second.m_TileSpriteIndex
+      value: 51
+      objectReference: {fileID: 0}
+    - target: {fileID: 8195094281672464692, guid: 433598ae7a2a641419584960aae6faf1,
+        type: 2}
+      propertyPath: m_Tiles.Array.data[4143].second.m_TileSpriteIndex
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 8195094281672464692, guid: 433598ae7a2a641419584960aae6faf1,
+        type: 2}
+      propertyPath: m_Tiles.Array.data[4409].second.m_TileSpriteIndex
+      value: 49
+      objectReference: {fileID: 0}
+    - target: {fileID: 8195094281672464692, guid: 433598ae7a2a641419584960aae6faf1,
+        type: 2}
+      propertyPath: m_Tiles.Array.data[4543].second.m_TileSpriteIndex
+      value: 48
+      objectReference: {fileID: 0}
+    - target: {fileID: 8195094281672464692, guid: 433598ae7a2a641419584960aae6faf1,
+        type: 2}
+      propertyPath: m_TileSpriteArray.Array.data[46].m_RefCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8195094281672464692, guid: 433598ae7a2a641419584960aae6faf1,
+        type: 2}
+      propertyPath: m_TileSpriteArray.Array.data[46].m_Data
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8195094281672464692, guid: 433598ae7a2a641419584960aae6faf1,
+        type: 2}
+      propertyPath: m_TileSpriteArray.Array.data[47].m_RefCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8195094281672464692, guid: 433598ae7a2a641419584960aae6faf1,
+        type: 2}
+      propertyPath: m_TileSpriteArray.Array.data[47].m_Data
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8195094281672464692, guid: 433598ae7a2a641419584960aae6faf1,
+        type: 2}
+      propertyPath: m_TileSpriteArray.Array.data[48].m_Data
+      value: 
+      objectReference: {fileID: 21300488, guid: 8d580fe8fef6936448b4f788ddc5425b,
+        type: 3}
+    - target: {fileID: 8195094281672464692, guid: 433598ae7a2a641419584960aae6faf1,
+        type: 2}
+      propertyPath: m_TileSpriteArray.Array.data[49].m_Data
+      value: 
+      objectReference: {fileID: 21300520, guid: 8d580fe8fef6936448b4f788ddc5425b,
+        type: 3}
+    - target: {fileID: 8195094281672464692, guid: 433598ae7a2a641419584960aae6faf1,
+        type: 2}
+      propertyPath: m_TileSpriteArray.Array.data[50].m_Data
+      value: 
+      objectReference: {fileID: 21300086, guid: 8d580fe8fef6936448b4f788ddc5425b,
+        type: 3}
+    - target: {fileID: 8195094281672464692, guid: 433598ae7a2a641419584960aae6faf1,
+        type: 2}
+      propertyPath: m_TileSpriteArray.Array.data[51].m_Data
+      value: 
+      objectReference: {fileID: 21300084, guid: 8d580fe8fef6936448b4f788ddc5425b,
+        type: 3}
+    - target: {fileID: 8195094281672464692, guid: 433598ae7a2a641419584960aae6faf1,
+        type: 2}
+      propertyPath: m_TileSpriteArray.Array.data[52].m_Data
+      value: 
+      objectReference: {fileID: 21300022, guid: 8d580fe8fef6936448b4f788ddc5425b,
+        type: 3}
+    - target: {fileID: 8195094281672464692, guid: 433598ae7a2a641419584960aae6faf1,
+        type: 2}
+      propertyPath: m_TileSpriteArray.Array.data[53].m_Data
+      value: 
+      objectReference: {fileID: 21300052, guid: 8d580fe8fef6936448b4f788ddc5425b,
+        type: 3}
+    - target: {fileID: 8195094281672464692, guid: 433598ae7a2a641419584960aae6faf1,
+        type: 2}
+      propertyPath: m_TileSpriteArray.Array.data[54].m_RefCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8195094281672464692, guid: 433598ae7a2a641419584960aae6faf1,
+        type: 2}
+      propertyPath: m_TileSpriteArray.Array.data[54].m_Data
+      value: 
+      objectReference: {fileID: 21300180, guid: 8d580fe8fef6936448b4f788ddc5425b,
+        type: 3}
+    - target: {fileID: 8195094281672464692, guid: 433598ae7a2a641419584960aae6faf1,
+        type: 2}
+      propertyPath: m_TileSpriteArray.Array.data[55].m_RefCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8195094281672464692, guid: 433598ae7a2a641419584960aae6faf1,
+        type: 2}
+      propertyPath: m_TileSpriteArray.Array.data[55].m_Data
+      value: 
+      objectReference: {fileID: 21300176, guid: 8d580fe8fef6936448b4f788ddc5425b,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 433598ae7a2a641419584960aae6faf1, type: 2}
   m_IsPrefabParent: 0
@@ -1349,6 +1467,17 @@ MonoBehaviour:
           m_StringArgument: police_man|Grey_robot|dialogue
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1405326693}
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &1422749447
@@ -1410,73 +1539,6 @@ MonoBehaviour:
   nameText: {fileID: 858036171}
   dialogueText: {fileID: 587024665}
   animator: {fileID: 1166346527}
-  buttonBorderStyle:
-    m_Name: 
-    m_Normal:
-      m_Background: {fileID: 0}
-      m_ScaledBackgrounds: []
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-    m_Hover:
-      m_Background: {fileID: 0}
-      m_ScaledBackgrounds: []
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-    m_Active:
-      m_Background: {fileID: 0}
-      m_ScaledBackgrounds: []
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-    m_Focused:
-      m_Background: {fileID: 0}
-      m_ScaledBackgrounds: []
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-    m_OnNormal:
-      m_Background: {fileID: 0}
-      m_ScaledBackgrounds: []
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-    m_OnHover:
-      m_Background: {fileID: 0}
-      m_ScaledBackgrounds: []
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-    m_OnActive:
-      m_Background: {fileID: 0}
-      m_ScaledBackgrounds: []
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-    m_OnFocused:
-      m_Background: {fileID: 0}
-      m_ScaledBackgrounds: []
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-    m_Border:
-      m_Left: 0
-      m_Right: 0
-      m_Top: 0
-      m_Bottom: 0
-    m_Margin:
-      m_Left: 0
-      m_Right: 0
-      m_Top: 0
-      m_Bottom: 0
-    m_Padding:
-      m_Left: 0
-      m_Right: 0
-      m_Top: 0
-      m_Bottom: 0
-    m_Overflow:
-      m_Left: 0
-      m_Right: 0
-      m_Top: 0
-      m_Bottom: 0
-    m_Font: {fileID: 0}
-    m_FontSize: 0
-    m_FontStyle: 0
-    m_Alignment: 0
-    m_WordWrap: 0
-    m_RichText: 1
-    m_TextClipping: 0
-    m_ImagePosition: 0
-    m_ContentOffset: {x: 0, y: 0}
-    m_FixedWidth: 0
-    m_FixedHeight: 0
-    m_StretchWidth: 1
-    m_StretchHeight: 0
 --- !u!1 &1436064259
 GameObject:
   m_ObjectHideFlags: 0

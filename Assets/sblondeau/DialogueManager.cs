@@ -91,7 +91,7 @@ public class DialogueManager : MonoBehaviour {
 		gos[0].transform.position = new Vector3(initPosn.x - 10000, initPosn.y - 10000, initPosn.z);
 	}
 
-	public void StartDialogue (List<Dialogue> dialoguesV, string nomGO)
+	public void StartDialogue (string nomGO)
 	{
 		// Initialisation des variables
 		sentences 		= new Queue<string>();
@@ -210,7 +210,7 @@ public class DialogueManager : MonoBehaviour {
 		// Selon le nom du GameObject, le dialogue sera différent
 		switch (nom)
 		{
-			case "Policie":
+			case "police_man":
 				// Premier dialogue du policier
 				// Interaction avec le policier
 				sentences  = new String[] {"Hey, robot qu’est ce que tu fais là ?", "Tu n’as rien à faire seul ici.", };

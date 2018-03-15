@@ -20,6 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4483955861069418}
   - component: {fileID: 212099764145419768}
+  - component: {fileID: 58412684438183492}
+  - component: {fileID: 114945164698490402}
   m_Layer: 0
   m_Name: tristesse
   m_TagString: Untagged
@@ -36,6 +38,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4290726179439478}
   - component: {fileID: 212017808234246018}
+  - component: {fileID: 58006060237291056}
+  - component: {fileID: 114832628233925274}
   m_Layer: 0
   m_Name: neutre
   m_TagString: Untagged
@@ -52,6 +56,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4158046323131476}
   - component: {fileID: 212324470954362356}
+  - component: {fileID: 58054827340029196}
+  - component: {fileID: 114537233467710300}
   m_Layer: 0
   m_Name: confue
   m_TagString: Untagged
@@ -84,6 +90,7 @@ GameObject:
   - component: {fileID: 4662422270519050}
   - component: {fileID: 212608881327830660}
   - component: {fileID: 58288648424591216}
+  - component: {fileID: 114287161641679340}
   m_Layer: 0
   m_Name: "col\xE8re"
   m_TagString: Untagged
@@ -100,6 +107,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4057919998956088}
   - component: {fileID: 212571979179946992}
+  - component: {fileID: 58120093925878050}
+  - component: {fileID: 114784413245976502}
   m_Layer: 0
   m_Name: joie
   m_TagString: Untagged
@@ -114,7 +123,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1912871751377072}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.76, y: 0.02, z: 1}
+  m_LocalPosition: {x: 8.76, y: 0.02, z: 2}
   m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_Children: []
   m_Father: {fileID: 4763487434656212}
@@ -127,7 +136,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1342338460226868}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.76, y: 1.8, z: 1}
+  m_LocalPosition: {x: 8.76, y: 1.8, z: 2}
   m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_Children: []
   m_Father: {fileID: 4763487434656212}
@@ -140,7 +149,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1273255530363198}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.76, y: -3.52, z: 1}
+  m_LocalPosition: {x: 8.76, y: -3.52, z: 2}
   m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_Children: []
   m_Father: {fileID: 4763487434656212}
@@ -153,7 +162,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1093113362434388}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.76, y: -1.76, z: 1}
+  m_LocalPosition: {x: 8.76, y: -1.76, z: 2}
   m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_Children: []
   m_Father: {fileID: 4763487434656212}
@@ -166,7 +175,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1803125976698442}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.76, y: 3.58, z: 1}
+  m_LocalPosition: {x: 8.76, y: 3.58, z: 2}
   m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_Children: []
   m_Father: {fileID: 4763487434656212}
@@ -190,6 +199,51 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &58006060237291056
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1273255530363198}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0000019073486, y: -0.00000047683716}
+  serializedVersion: 2
+  m_Radius: 1.2499999
+--- !u!58 &58054827340029196
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1342338460226868}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0000019073486, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.2499999
+--- !u!58 &58120093925878050
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1912871751377072}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0000019073486, y: -0.000000029802322}
+  serializedVersion: 2
+  m_Radius: 1.2499999
 --- !u!58 &58288648424591216
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -205,6 +259,191 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.2499999
+--- !u!58 &58412684438183492
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1093113362434388}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0000019073486, y: -0.00000023841858}
+  serializedVersion: 2
+  m_Radius: 1.2499999
+--- !u!114 &114287161641679340
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1803125976698442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4747809ca40a34301a3b273ff421c68c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  neutre: {fileID: 114337300367300622, guid: c92c0720f4f3944b19303fd87415460b, type: 2}
+  triste: {fileID: 114114231006791274, guid: b518e77378a7f406e84a320e3f709ee5, type: 2}
+  joie: {fileID: 114647517748113452, guid: d5fb3716682f14b098ab551fb655abba, type: 2}
+  confusion: {fileID: 114982222373836074, guid: 6cee1a42a21da4346b3920712ad323a7,
+    type: 2}
+  colere: {fileID: 114775367725543236, guid: ed414f5b369d74f62baf0fd55b6df555, type: 2}
+  actionOnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114287161641679340}
+        m_MethodName: changeEmotions
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  emotionID: 4
+--- !u!114 &114537233467710300
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1342338460226868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4747809ca40a34301a3b273ff421c68c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  neutre: {fileID: 114337300367300622, guid: c92c0720f4f3944b19303fd87415460b, type: 2}
+  triste: {fileID: 114114231006791274, guid: b518e77378a7f406e84a320e3f709ee5, type: 2}
+  joie: {fileID: 114647517748113452, guid: d5fb3716682f14b098ab551fb655abba, type: 2}
+  confusion: {fileID: 114982222373836074, guid: 6cee1a42a21da4346b3920712ad323a7,
+    type: 2}
+  colere: {fileID: 114775367725543236, guid: ed414f5b369d74f62baf0fd55b6df555, type: 2}
+  actionOnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114537233467710300}
+        m_MethodName: changeEmotions
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  emotionID: 3
+--- !u!114 &114784413245976502
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1912871751377072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4747809ca40a34301a3b273ff421c68c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  neutre: {fileID: 114337300367300622, guid: c92c0720f4f3944b19303fd87415460b, type: 2}
+  triste: {fileID: 114114231006791274, guid: b518e77378a7f406e84a320e3f709ee5, type: 2}
+  joie: {fileID: 114647517748113452, guid: d5fb3716682f14b098ab551fb655abba, type: 2}
+  confusion: {fileID: 114982222373836074, guid: 6cee1a42a21da4346b3920712ad323a7,
+    type: 2}
+  colere: {fileID: 114775367725543236, guid: ed414f5b369d74f62baf0fd55b6df555, type: 2}
+  actionOnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114784413245976502}
+        m_MethodName: changeEmotions
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  emotionID: 2
+--- !u!114 &114832628233925274
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1273255530363198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4747809ca40a34301a3b273ff421c68c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  neutre: {fileID: 114337300367300622, guid: c92c0720f4f3944b19303fd87415460b, type: 2}
+  triste: {fileID: 114114231006791274, guid: b518e77378a7f406e84a320e3f709ee5, type: 2}
+  joie: {fileID: 114647517748113452, guid: d5fb3716682f14b098ab551fb655abba, type: 2}
+  confusion: {fileID: 114982222373836074, guid: 6cee1a42a21da4346b3920712ad323a7,
+    type: 2}
+  colere: {fileID: 114775367725543236, guid: ed414f5b369d74f62baf0fd55b6df555, type: 2}
+  actionOnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114832628233925274}
+        m_MethodName: changeEmotions
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  emotionID: 0
+--- !u!114 &114945164698490402
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1093113362434388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4747809ca40a34301a3b273ff421c68c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  neutre: {fileID: 114337300367300622, guid: c92c0720f4f3944b19303fd87415460b, type: 2}
+  triste: {fileID: 114114231006791274, guid: b518e77378a7f406e84a320e3f709ee5, type: 2}
+  joie: {fileID: 114647517748113452, guid: d5fb3716682f14b098ab551fb655abba, type: 2}
+  confusion: {fileID: 114982222373836074, guid: 6cee1a42a21da4346b3920712ad323a7,
+    type: 2}
+  colere: {fileID: 114775367725543236, guid: ed414f5b369d74f62baf0fd55b6df555, type: 2}
+  actionOnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114945164698490402}
+        m_MethodName: changeEmotions
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  emotionID: 1
 --- !u!212 &212017808234246018
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -238,7 +477,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: 6c3f9fa09d9724737b1ebcf507b7f447, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -282,9 +521,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: f924976337d344ee888ad85d90c297e1, type: 3}
-  m_Color: {r: 0.7607844, g: 0.7607844, b: 0.7607844, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -326,9 +565,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: 12c56724b7fd8411e9ac04f8231f2b8f, type: 3}
-  m_Color: {r: 0.7607844, g: 0.7607844, b: 0.7607844, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -370,9 +609,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: 9443b879461c64af99397e89c2bafecd, type: 3}
-  m_Color: {r: 0.7607844, g: 0.7607844, b: 0.7490196, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -414,9 +653,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: 17e818644747442fd8633304e04e6c77, type: 3}
-  m_Color: {r: 0.7607844, g: 0.7607844, b: 0.7607844, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

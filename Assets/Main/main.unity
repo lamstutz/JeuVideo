@@ -570,6 +570,18 @@ Prefab:
       propertyPath: actionOnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
       objectReference: {fileID: 1877018322}
+    - target: {fileID: 4290726179439478, guid: b6cab48446dbf46a79a3e2e0cae18d14, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4057919998956088, guid: b6cab48446dbf46a79a3e2e0cae18d14, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 8.76
+      objectReference: {fileID: 0}
+    - target: {fileID: 4057919998956088, guid: b6cab48446dbf46a79a3e2e0cae18d14, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -3.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b6cab48446dbf46a79a3e2e0cae18d14, type: 2}
   m_IsPrefabParent: 0
@@ -1640,7 +1652,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1548367077}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3000, y: 3000, z: 8.577541}
+  m_LocalPosition: {x: 3124, y: 3022, z: 8.577541}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 289917103}
@@ -1986,7 +1998,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -595453217
+  randomSeed: -1294653680
   InitialModule:
     serializedVersion: 3
     enabled: 1

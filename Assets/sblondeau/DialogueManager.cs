@@ -39,13 +39,13 @@ public class DialogueManager : MonoBehaviour {
 		if((Input.GetAxis("Horizontal") < 0) && optionvisible){
 			GameObject choix1 = GameObject.Find("Choix1");
 			GameObject choix2 = GameObject.Find("Choix2");
-
-
+			choix1.GetComponent<Button>().Select();
 		}
 
 		if((Input.GetAxis("Horizontal") > 0) && optionvisible){
 			GameObject choix1 = GameObject.Find("Choix1");
 			GameObject choix2 = GameObject.Find("Choix2");
+			choix2.GetComponent<Button>().Select();
 		}
 
 		if(Input.GetKey("space") || (Input.GetKey(KeyCode.Return)) || Input.GetKey("a") || Input.GetKeyDown("joystick button 0")){

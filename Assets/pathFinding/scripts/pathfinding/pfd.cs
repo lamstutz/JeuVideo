@@ -20,7 +20,6 @@ namespace pathfinding {
                 Node current = ouverte.First ().Value;
                 ouverte.RemoveAt (0);
                 fermee.Add (current);
-//if (current.position == targetCell)
                 if (Vector2Int.Distance(current.position, targetCell) <= 2.0f ){
                     return MakePathFromLastNode (current, new List<Vector2Int> ());
                 } 
@@ -37,7 +36,7 @@ namespace pathfinding {
                         ouverte.Add (voisin.GetFCost (), voisin);
                     }
                 }
-                fermee.Add (current);
+                // fermee.Add (current);
             }
 
 

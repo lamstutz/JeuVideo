@@ -79,7 +79,7 @@ public class OnClickFindPathAndMove : MonoBehaviour {
 				print("FINISH PATHFINDING");
 
 				if(callback != null && callback == "dialogue"){
-					GameObject.Find(objectToMoveName).GetComponent<DialogueTrigger>().TriggerDialogue();
+					GameObject.Find(objectToMoveName).GetComponent<DialogueTrigger>().TriggerDialogue(objectToMoveName);
 				}
 
 			}

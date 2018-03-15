@@ -58,6 +58,11 @@ public class DialogueManager : MonoBehaviour {
 		if((Input.GetKey("space") || (Input.GetKey(KeyCode.Return)) || Input.GetKey("a") || Input.GetKeyDown("joystick button 0")) && continuevisible && touch == 1){
 			DisplayNextSentence();
 		}
+
+		// Quitt boite de dialogue
+		if(Input.GetKeyDown(KeyCode.Escape)){
+			EndDialogue();
+		}
 	}
 
 	void afficherOption () {

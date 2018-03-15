@@ -73,12 +73,13 @@ public class OnClickFindPathAndMove : MonoBehaviour {
 			}
 
 			//arrivé à la cible
-			if(!fin && currentPath.nodes.Count == 0 && (Vector2.Distance(targetV2, currentTarget) <= 2.0f ) ){
+			if(!fin && currentPath.nodes.Count == 0 && (Vector2.Distance(targetV2, currentTarget) <= 2.0f ) && (Vector2.Distance(targetV2, objectToMove.position) <= 2.0f) ){
 				fin = true;
 				ended = true;
 				print("FINISH PATHFINDING");
 
 				if(callback != null && callback == "dialogue"){
+					print(objectToMoveName);
 					GameObject.Find(objectToMoveName).GetComponent<DialogueTrigger>().TriggerDialogue(objectToMoveName);
 				}
 

@@ -14,7 +14,7 @@ namespace pathfinding {
             depart.cout = 0;
             ouverte.Add (depart.GetFCost (), depart);
             int loopCount = 0;
-            while (ouverte.Count > 0 && loopCount < 2500) {
+            while (ouverte.Count > 0 && loopCount < 2000) {
 
                 loopCount ++;
                 Node current = ouverte.First ().Value;

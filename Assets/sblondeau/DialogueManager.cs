@@ -11,13 +11,13 @@ public class DialogueManager : MonoBehaviour {
 
 	public Animator animator;
 
-	public GUIStyle buttonBorderStyle;
-
 	private Queue<string> sentences;
 	private GameObject[] gos;
 	private Vector3 otherPosn;
 	private Vector3 initPosn;
-	private Dialogue[] dialogues;
+	//private Dialogue[] dialogues;
+
+	private List<Dialogue> dialogues;
 	private bool option;
 	private int index;
 	private int countT;
@@ -91,10 +91,17 @@ public class DialogueManager : MonoBehaviour {
 		gos[0].transform.position = new Vector3(initPosn.x - 10000, initPosn.y - 10000, initPosn.z);
 	}
 
-	public void StartDialogue (Dialogue[] dialoguesV, string nomGO)
+	public void StartDialogue (List<Dialogue> dialoguesV, string nomGO)
 	{
-		// Garde les dialogues pour la suite
-		dialogues = dialoguesV;
+		// Initialisation des variables
+		sentences 		= new Queue<string>();
+		dialogues		= new List<Dialogue>();
+		index 			= 0;
+		continuevisible = false;
+		touch			= 0;
+
+		// Choix du dialorue
+		choixDialogue(nomGO);
 
 		// Animation de la box
 		animator.SetBool("IsOpen", true);
@@ -104,7 +111,7 @@ public class DialogueManager : MonoBehaviour {
 
 		option 			= dialogues[index].option;	// Affichage ou non 
 		nameText.text   = dialogues[index].name;	// Nom de personnage
-		countT 			= dialogues.Length;			// Nombre de dialogue		
+		countT 			= dialogues.Count;			// Nombre de dialogue		
 		
 		continuevisible = true;
 
@@ -134,8 +141,10 @@ public class DialogueManager : MonoBehaviour {
 			if(option){
 				afficherOption();
 			}else{
+				Debug.Log("countT " + countT);
+				Debug.Log("index " + index);
 				// Sinon fin de dialogue
-				if(countT <= index -1){
+				if(countT == index +1){
 					EndDialogue();
 					return;
 				}else{
@@ -175,35 +184,78 @@ public class DialogueManager : MonoBehaviour {
 		animator.SetBool("IsOpen", false);
 	}
 
-	public void choixAttendre()
+	public void choix1()
 	{
-		// A modifier
-		EndDialogue();
+		// Sélection du dialogue
+		choixDialogue("Policie_1");
+		
 		return;
 	}
 
-	public void choixPartir()
+	public void choix2()
 	{
-		// A modifier
-		EndDialogue();
+		// Choix du dialogue
+		choixDialogue("Policie_1");
 		return;
 	}
 
 	void choixDialogue(string nom){
+
+		if(dialogues.Count > 0){
+			dialogues.Clear();
+		}
+		string[] sentences;
+		Dialogue unDialogue;
+
 		// Selon le nom du GameObject, le dialogue sera différent
 		switch (nom)
 		{
 			case "Policie":
 				// Premier dialogue du policier
+				// Interaction avec le policier
+				sentences  = new String[] {"Hey, robot qu’est ce que tu fais là ?", "Tu n’as rien à faire seul ici.", };
+				unDialogue = new Dialogue("Policier", sentences, false);
+				dialogues.Add(unDialogue);
+				// Réponse de Nao
+				sentences  = new String[] {"Je ne sais pas, Où suis-je ?" };
+				unDialogue = new Dialogue("Nao", sentences, false);
+				dialogues.Add(unDialogue);
+				// Réponse du policier
+				sentences  = new String[] {"Dans la forêt à proximité de la ville “404land”."};
+				unDialogue = new Dialogue("Policier", sentences, false);
+				dialogues.Add(unDialogue);
+				// Demande de Nao
+				sentences  = new String[] {"( Que demander à cette personne  ? )"};
+				unDialogue = new Dialogue("Nao", sentences, true);
+				dialogues.Add(unDialogue);
 				break;
 			case "Policie_1":
-				// Réponse au choix 1 par le policier
+				// Question de Nao
+				sentences  = new String[] {"Quel direction dois-je prendre ?"};
+				unDialogue = new Dialogue("Nao", sentences, false);
+				dialogues.Add(unDialogue);
+				// Réponse du policier
+				sentences  = new String[] {"Suis le chemin de la forêt vers l’Est, tu atteindre la ville facilement.", "Tu ferais bien d’y aller tu me semble complètement désorienté."};
+				unDialogue = new Dialogue("Policier", sentences, false);
+				dialogues.Add(unDialogue);
 				break;
 			case "Policie_2":
-				// Réponse au choix 2 par le policier
+				// Question de Nao
+				sentences  = new String[] {"Quel direction dois-je prendre ?"};
+				unDialogue = new Dialogue("Nao", sentences, false);
+				dialogues.Add(unDialogue);
+				// Réponse du policier
+				sentences  = new String[] {"En te regardant, je pense que tu allais en direction de la décharge.", 
+				"Tu as du tombé d’un camion.", "Suis le chemin de la forêt vers l’Est, tu atteindre la ville facilement.",
+				"Tu ferais bien d’y aller tu me semble complètement désorienté."};
+				unDialogue = new Dialogue("Policier", sentences, false);
+				dialogues.Add(unDialogue);
 				break;
-			default:
+			case "Nao":
 				// Script de lancement
+				sentences  = new String[] {"Où suis-je ?", "Il n'y a personne ici.", "Je devrais aller trouver des informations."};
+				unDialogue = new Dialogue("...", sentences, false);
+				dialogues.Add(unDialogue);
 				break;
 		}
 	}

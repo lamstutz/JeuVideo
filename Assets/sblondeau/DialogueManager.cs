@@ -33,7 +33,7 @@ public class DialogueManager : MonoBehaviour {
 	void Start () {
 		sentences 		= new Queue<string>();
 		index 			= 0;
-		continuevisible = true;
+		continuevisible = false;
 		touch			= 0;
 
 		// Initialisation des variables boutons
@@ -116,7 +116,7 @@ public class DialogueManager : MonoBehaviour {
 		cacherOption();
 
 		// Affichage du bouton continue
-		GOContinue.transform.position = new Vector3(PosContinue.x, PosContinue.y, PosContinue.z);
+		continuevisible = true;
 
 		option 			= dialogues[index].option;	// Affichage ou non 
 		nameText.text   = dialogues[index].name;	// Nom de personnage
@@ -299,12 +299,6 @@ public class DialogueManager : MonoBehaviour {
 				unDialogue = new Dialogue("Policier", sentences, false, options);
 				dialogues.Add(unDialogue);
 				break;
-			case "Girl":
-				// Dialogue avec la petite fille
-				sentences  = new String[] {"Snif sninf...","J'ai perdu mon ballon...", "Je n'arrives pas à le retrouver.", "Personne ne peux m'aider ?"};
-				options  = new String[] {};
-				unDialogue = new Dialogue("Petite fille", sentences, false, options);
-				dialogues.Add(unDialogue);
 			case "Girl_Win":
 				// Dialogue avec la petite fille
 				sentences  = new String[] {"Snif sninf...","J'ai perdu mon ballon...", "Je n'arrives pas à le retrouver.", "Personne ne peux m'aider ?"};
@@ -318,6 +312,15 @@ public class DialogueManager : MonoBehaviour {
 				options  = new String[] {};
 				unDialogue = new Dialogue("...", sentences, false, options);
 				dialogues.Add(unDialogue);
+				break;
+			case "Girl":
+				// Dialogue avec la petite fille
+				sentences  = new String[] {"Snif sninf...","J'ai perdu mon ballon...", "Je n'arrives pas à le retrouver.", "Personne ne peux m'aider ?"};
+				options  = new String[] {};
+				unDialogue = new Dialogue("Petite fille", sentences, false, options);
+				dialogues.Add(unDialogue);
+				break;
+			default:
 				break;
 				
 		}

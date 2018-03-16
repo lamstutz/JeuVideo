@@ -13,16 +13,20 @@ public class DialogueManager : MonoBehaviour {
 
 	private Queue<string> sentences;
 	private GameObject[] gos;
-	private Vector3 otherPosn;
-	private Vector3 initPosn;
-	//private Dialogue[] dialogues;
-
 	private List<Dialogue> dialogues;
 	private bool option;
 	private int index;
 	private int countT;
 	private Boolean optionvisible; // Vrai ils sont cliquable sinon non
 	private Boolean continuevisible; // Vrai ils sont cliquable sinon non
+
+	private GameObject GOChoix1;
+	private	GameObject GOChoix2;
+	private GameObject GOContinue;
+	private Vector3 PosChoix1;
+	private Vector3 PosChoix2;
+	private Vector3 PosContinue;
+	
 	private int	touch;
 
 	// Use this for initialization
@@ -31,21 +35,25 @@ public class DialogueManager : MonoBehaviour {
 		index 			= 0;
 		continuevisible = true;
 		touch			= 0;
+
+		// Initialisation des variables boutons
+		GOChoix1 = GameObject.Find("Choix1");
+		GOChoix2 = GameObject.Find("Choix2");
+		GOContinue = GameObject.Find("ContinueButton");
+		PosChoix1 = GOChoix1.transform.position;
+		PosChoix2 = GOChoix2.transform.position;
+		PosContinue = GOContinue.transform.position;
 	}
 
 	void Update() {
 
 		// Si touche gauche et option activé
 		if((Input.GetAxis("Horizontal") < 0) && optionvisible){
-			GameObject choix1 = GameObject.Find("Choix1");
-			GameObject choix2 = GameObject.Find("Choix2");
-			choix1.GetComponent<Button>().Select();
+			GOChoix1.GetComponent<Button>().Select();
 		}
 
 		if((Input.GetAxis("Horizontal") > 0) && optionvisible){
-			GameObject choix1 = GameObject.Find("Choix1");
-			GameObject choix2 = GameObject.Find("Choix2");
-			choix2.GetComponent<Button>().Select();
+			GOChoix2.GetComponent<Button>().Select();
 		}
 
 		if(Input.GetKey("space") || (Input.GetKey(KeyCode.Return)) || Input.GetKey("a") || Input.GetKeyDown("joystick button 0")){
@@ -68,34 +76,26 @@ public class DialogueManager : MonoBehaviour {
 	void afficherOption () {
 		// Les options sont affichés et cliquable
 		optionvisible = true;
-		gos = GameObject.FindGameObjectsWithTag("choix");
-		otherPosn = gos[0].transform.position;
 
-		foreach (GameObject go in gos)
-		{
-			otherPosn = go.transform.position;
-			go.transform.position = new Vector3(otherPosn.x+10000, otherPosn.y+10000, otherPosn.z);
-		}
+		// Cache les deux boutons
+		GOChoix1.transform.position = new Vector3(PosChoix1.x, PosChoix1.y, PosChoix1.z);
+		GOChoix2.transform.position = new Vector3(PosChoix2.x, PosChoix2.y, PosChoix2.z);
+		
+		// Changement de texte des options
 
 		// On cache le bouton continue
 		continuevisible = false;
-		gos = GameObject.FindGameObjectsWithTag("continue");
-		initPosn = gos[0].transform.position;
-		gos[0].transform.position = new Vector3(initPosn.x - 10000, initPosn.y - 10000, initPosn.z);
+		GOContinue.transform.position = new Vector3(PosContinue.x - 10000, PosContinue.y - 10000, PosContinue.z);
 	}
 
 	void cacherOption () {
 
 		// Indicateur de visibilité des options.
 		optionvisible 	= false;
-		gos 		= GameObject.FindGameObjectsWithTag("choix");
-		otherPosn 	= gos[0].transform.position;
 
-		foreach (GameObject go in gos)
-		{
-			otherPosn = go.transform.position;
-			go.transform.position = new Vector3(otherPosn.x-10000, otherPosn.y-10000, otherPosn.z);
-		}
+		// Cache les deux boutons
+		GOChoix1.transform.position = new Vector3(PosChoix1.x - 10000, PosChoix1.y - 10000, PosChoix1.z);
+		GOChoix2.transform.position = new Vector3(PosChoix2.x - 10000, PosChoix2.y - 10000, PosChoix2.z);
 
 	}
 	public void StartDialogue (string nomGO)
@@ -115,11 +115,8 @@ public class DialogueManager : MonoBehaviour {
 		// Cache les boutons de choix
 		cacherOption();
 
-		if(!continuevisible){
-			gos = GameObject.FindGameObjectsWithTag("continue");
-			initPosn = gos[0].transform.position;
-			gos[0].transform.position = new Vector3(initPosn.x + 10000, initPosn.y + 10000, initPosn.z);
-		}
+		// Affichage du bouton continue
+		GOContinue.transform.position = new Vector3(PosContinue.x, PosContinue.y, PosContinue.z);
 
 		option 			= dialogues[index].option;	// Affichage ou non 
 		nameText.text   = dialogues[index].name;	// Nom de personnage
@@ -200,9 +197,7 @@ public class DialogueManager : MonoBehaviour {
 
 		// Afficher le continue si cacher
 		continuevisible = true;
-		gos = GameObject.FindGameObjectsWithTag("continue");
-		initPosn = gos[0].transform.position;
-		gos[0].transform.position = new Vector3(initPosn.x + 10000, initPosn.y + 10000, initPosn.z);
+		GOContinue.transform.position = new Vector3(PosContinue.x, PosContinue.y, PosContinue.z);
 
 		index 			= 0;
 		option 			= dialogues[index].option;	// Affichage ou non 
@@ -224,9 +219,7 @@ public class DialogueManager : MonoBehaviour {
 
 		// Afficher le continue si cacher
 		continuevisible = true;
-		gos = GameObject.FindGameObjectsWithTag("continue");
-		initPosn = gos[0].transform.position;
-		gos[0].transform.position = new Vector3(initPosn.x + 10000, initPosn.y + 10000, initPosn.z);
+		GOContinue.transform.position = new Vector3(PosContinue.x, PosContinue.y, PosContinue.z);
 
 		index 			= 0;
 		option 			= dialogues[index].option;	// Affichage ou non 
@@ -244,6 +237,7 @@ public class DialogueManager : MonoBehaviour {
 			dialogues.Clear();
 		}
 		string[] sentences;
+		string[] options;
 		Dialogue unDialogue;
 
 		// Selon le nom du GameObject, le dialogue sera différent
@@ -252,61 +246,77 @@ public class DialogueManager : MonoBehaviour {
 			case "Nao":
 				// Script de lancement
 				sentences  = new String[] {"Où suis-je ?", "Il n'y a rien ici.", "Je devrais aller trouver des informations."};
-				unDialogue = new Dialogue("...", sentences, false);
+				options  = new String[] {};
+				unDialogue = new Dialogue("...", sentences, false, options);
 				dialogues.Add(unDialogue);
 				break;
 			case "police_man":
 				// Premier dialogue du policier
 				// Interaction avec le policier
-				sentences  = new String[] {"Hey, robot qu’est ce que tu fais là ?", "Tu n’as rien à faire seul ici.", };
-				unDialogue = new Dialogue("Policier", sentences, false);
+				sentences  = new String[] {"Hey, robot qu’est ce que tu fais là ?", "Tu n’as rien à faire seul ici."};
+				options  = new String[] {};
+				unDialogue = new Dialogue("Policier", sentences, false, options);
 				dialogues.Add(unDialogue);
-				// Réponse de Nao
+				// Réponse de Nao'y
 				sentences  = new String[] {"Bonjour humain. Je m'appelle Nao.", "Je suis perdu. Où suis-je ?" };
-				unDialogue = new Dialogue("Nao", sentences, false);
+				options  = new String[] {};
+				unDialogue = new Dialogue("Nao", sentences, false, options);
 				dialogues.Add(unDialogue);
 				// Réponse du policier
 				sentences  = new String[] {"Dans la forêt à proximité de la ville “404land”."};
-				unDialogue = new Dialogue("Policier", sentences, false);
+				options  = new String[] {};
+				unDialogue = new Dialogue("Policier", sentences, false, options);
 				dialogues.Add(unDialogue);
 				// Demande de Nao
 				sentences  = new String[] {"( Que demander à cette personne  ? )"};
-				unDialogue = new Dialogue("Nao", sentences, true);
+				options  = new String[] {"Une Direction", "Plus d'information"};
+				unDialogue = new Dialogue("Nao", sentences, true, options);
 				dialogues.Add(unDialogue);
 				break;
 			case "police_man_1":
 				// Question de Nao
 				sentences  = new String[] {"Quel direction dois-je prendre ?"};
-				unDialogue = new Dialogue("Nao", sentences, false);
+				options  = new String[] {};
+				unDialogue = new Dialogue("Nao", sentences, false, options);
 				dialogues.Add(unDialogue);
 				// Réponse du policier
 				sentences  = new String[] {"Suis le chemin de la forêt vers l’Est, tu atteindras la ville facilement.", "Tu ferais bien d’y aller tu me semble complètement désorienté."};
-				unDialogue = new Dialogue("Policier", sentences, false);
+				options  = new String[] {};
+				unDialogue = new Dialogue("Policier", sentences, false, options);
 				dialogues.Add(unDialogue);
 				break;
 			case "police_man_2":
 				// Question de Nao
 				sentences  = new String[] {"Que fais-je ici ?"};
-				unDialogue = new Dialogue("Nao", sentences, false);
+				options  = new String[] {};
+				unDialogue = new Dialogue("Nao", sentences, false, options);
 				dialogues.Add(unDialogue);
 				// Réponse du policier
 				sentences  = new String[] {"En te regardant, je pense que tu allais en direction de la décharge.", 
 				"Tu as du tombé d’un camion.", "Suis le chemin de la forêt vers l’Est, tu atteindras la ville facilement.",
 				"Tu ferais bien d’y aller tu me semble complètement désorienté."};
-				unDialogue = new Dialogue("Policier", sentences, false);
+				options  = new String[] {};
+				unDialogue = new Dialogue("Policier", sentences, false, options);
 				dialogues.Add(unDialogue);
 				break;
-			
 			case "Girl":
 				// Dialogue avec la petite fille
-				sentences  = new String[] {"Snif sninf...","J'ai perdu mon ballon..."};
-				unDialogue = new Dialogue("...", sentences, false);
+				sentences  = new String[] {"Snif sninf...","J'ai perdu mon ballon...", "Je n'arrives pas à le retrouver.", "Personne ne peux m'aider ?"};
+				options  = new String[] {};
+				unDialogue = new Dialogue("Petite fille", sentences, false, options);
+				dialogues.Add(unDialogue);
+			case "Girl_Win":
+				// Dialogue avec la petite fille
+				sentences  = new String[] {"Snif sninf...","J'ai perdu mon ballon...", "Je n'arrives pas à le retrouver.", "Personne ne peux m'aider ?"};
+				options  = new String[] {};
+				unDialogue = new Dialogue("Petite fille", sentences, false, options);
 				dialogues.Add(unDialogue);
 				break;
 			case "EntrerVille":
 				// Dialogue avec la petite fille
 				sentences  = new String[] {"Voila la ville. On pourra me donner des indications.", "Je ne devrais pas être là pourtant j'y suis"};
-				unDialogue = new Dialogue("...", sentences, false);
+				options  = new String[] {};
+				unDialogue = new Dialogue("...", sentences, false, options);
 				dialogues.Add(unDialogue);
 				break;
 				

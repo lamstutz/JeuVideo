@@ -12,17 +12,28 @@ public class MoveRobot : MonoBehaviour
     public Vector3 currentSpeed;
 
     private AnimationCourse ac;
+    private float initialSpeed;
 
     // Use this for initialization
     void Start()
     {
         // Récupère une référence au script AnimationCourse attaché au même GameObject
         ac = GetComponent<AnimationCourse>();
+        initialSpeed = maxSpeed;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            maxSpeed = 12f;
+        }
+        else
+        {
+            maxSpeed = initialSpeed;
+        }
+
         // Calcule une acceleration en fonction de l'entrée utilisateur et de l'accelération configurée pour l'objet
         // Chaque valeur du Vector3 est exprimée en unité par seconde par seconde
         // celà veut dire que chaque seconde, la vitesse augmente de cette valeur configurée.

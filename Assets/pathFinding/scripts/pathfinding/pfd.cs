@@ -2,45 +2,135 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Tilemaps;
+
 
 namespace pathfinding {
 
-    public class AStar {
-        public static List<Vector2Int> FindPath (Vector2Int origin, Vector2Int targetCell, Func<Vector2Int, bool> Collide, Vector2 originV2, Vector2 targetCellV2) {
-            List<Node> fermee = new List<Node> ();
-            SortedList<float, Node> ouverte = new SortedList<float, Node> (new DuplicateKeyComparer<float> ());
+    public class Node {
+		public Vector3 position;
+		public float cout;
+		public float heuristique;
+		public Node parent = null;
 
-            Node depart = new Node (origin, Vector2.Distance (origin, targetCell));
-            depart.cout = 0;
-            ouverte.Add (depart.GetFCost (), depart);
+		public Node (Vector3 p, float h, float c) {
+			position = p;
+			cout = c;
+			heuristique = h;
+		}
+
+		public float GetFCost() {
+			return heuristique + cout;
+		}
+
+        public bool samePositionTo (Node obj) {
+			return position == obj.position;
+		}
+
+		public int CompareCostTo (Node obj) {
+			return GetFCost().CompareTo (obj.GetFCost());
+		}
+	}
+
+    public class AStar {
+
+
+        public static List<Vector3> FindPath (Vector3 origin, Vector3 target, TilemapCollider2D mapCollider) {
+
+            //init fermee
+            List<Node> fermee = new List<Node> ();
+
+            //init ouverte
+            List<Node> ouverte = new List<Node> ();
+
+            //init depart
+            Node depart = new Node (origin, Vector3.Distance (origin, target), 0);
+
+            //ajout du depart à ouvert
+            ouverte.Add (depart);
+
+            //debut de la recherche
             int loopCount = 0;
             while (ouverte.Count > 0 && loopCount < 2000) {
-
                 loopCount ++;
-                Node current = ouverte.First ().Value;
-                ouverte.RemoveAt (0);
+
+                //on enleve le noeud qui a le plus grand coup de la liste ouverte
+                Node current = removeSmallerCost(ouverte);
+                //et on l'ajoute à la liste fermée
                 fermee.Add (current);
-                if (Vector2Int.Distance(current.position, targetCell) <= 2.0f ){
-                    return MakePathFromLastNode (current, new List<Vector2Int> ());
+
+                //si la distance entre la position du noeud courant et de la cible est inferrieur à deux cases, 
+                //on termine la recherche
+                if (Vector3.Distance(current.position, target) <= 2.0f ){
+                    return MakePathFromLastNode (current, new List<Vector3> ());
                 } 
 
-                Node[] voisins = CreateAvailableNeighbours (current, targetCell, fermee);
+                //on recupere les 4 noeuds voisins
+                Node[] voisins = CreateAvailableNeighbours (current, target, fermee, current.cout + 1);
+
                 foreach (Node voisin in voisins) {
-                    voisin.cout = current.cout + 1;
                     // On parcours le voisin si le nœud est parcourable 
                     // et s'il n'est pas déjà fermé avec un coût moindre
                     if (!IsClosed (voisin, fermee, voisin.GetFCost ()) &&
-                        !Collide (voisin.position)
+                        !Collide (voisin.position, mapCollider)
                     ) {
+
+
+                        // cherche s'il y a déjà un noeud ouvert
+                        int indexOfSamePos = findIndexByPos(voisin, ouverte);
+                        // s'il n'existe pas, ajouter
+                        if (indexOfSamePos == -1) {
+                            int indexOfSameCost = findIndexByCost(voisin, ouverte);
+                            if(indexOfSameCost == -1){
+                                ouverte.Add (voisin);
+                            }else{
+                                ouverte[indexOfSameCost] = voisin;
+                            }
+                        }else 
+                        // s'il existe déjà mais qu'il est plus couteux, mettre à jour
+                        if (ouverte[indexOfSamePos].CompareCostTo(voisin) >= 0) {
+                            ouverte[indexOfSamePos].cout = voisin.cout;
+                        }
+                        
+
                         voisin.parent = current;
-                        ouverte.Add (voisin.GetFCost (), voisin);
+
                     }
                 }
-                // fermee.Add (current);
             }
 
 
             return null;
+        }
+
+        private static int findIndexByPos (Node node, List<Node> list) {
+            for (int i = 0; i < list.Count; i++) {
+                if (node.samePositionTo(list[i])) {
+                    return i;
+                }
+            }
+            return -1;
+        }
+
+        private static int findIndexByCost (Node node, List<Node> list) {
+            for (int i = 0; i < list.Count; i++) {
+                if (node.CompareCostTo(list[i]) == 0) {
+                    return i;
+                }
+            }
+            return -1;
+        }
+
+        private static Node removeSmallerCost(List<Node> list){
+            int indexNodeLarger = 0;
+            for (int i = 1; i < list.Count; i++) {
+                if (list[i].CompareCostTo(list[indexNodeLarger])  < 0 ) {
+                    indexNodeLarger = i;
+                }
+            }
+            Node nodeLarger = list[indexNodeLarger];
+            list.RemoveAt(indexNodeLarger);
+            return nodeLarger;
         }
 
         private static bool IsClosed (Node voisin, List<Node> fermee, float voisinFCost) {
@@ -51,20 +141,20 @@ namespace pathfinding {
             return false;
         }
 
-        private static Node[] CreateAvailableNeighbours (Node current, Vector2Int destination, List<Node> closed) {
+        private static Node[] CreateAvailableNeighbours (Node current, Vector3 target, List<Node> closed, float cout) {
             Node[] nodes = new Node[4];
-            Vector2Int up = current.position + Vector2Int.up;
-            nodes[0] = new Node (up, Vector2.Distance (up, destination));
-            Vector2Int right = current.position + Vector2Int.right;
-            nodes[1] = new Node (right, Vector2.Distance (right, destination));
-            Vector2Int left = current.position + Vector2Int.left;
-            nodes[2] = new Node (left, Vector2.Distance (left, destination));
-            Vector2Int down = current.position + Vector2Int.down;
-            nodes[3] = new Node (down, Vector2.Distance (down, destination));
+            Vector3 up = current.position + Vector3.up;
+            nodes[0] = new Node (up, Vector3.Distance (up, target), cout);
+            Vector3 right = current.position + Vector3.right;
+            nodes[1] = new Node (right, Vector3.Distance (right, target), cout);
+            Vector3 left = current.position + Vector3.left;
+            nodes[2] = new Node (left, Vector3.Distance (left, target), cout);
+            Vector3 down = current.position + Vector3.down;
+            nodes[3] = new Node (down, Vector3.Distance (down, target), cout);
             return nodes;
         }
 
-        private static List<Vector2Int> MakePathFromLastNode (Node current, List<Vector2Int> list) {
+        private static List<Vector3> MakePathFromLastNode (Node current, List<Vector3> list) {
             if (current.parent != null) {
                 MakePathFromLastNode (current.parent, list);
             }
@@ -72,19 +162,11 @@ namespace pathfinding {
             return list;
         }
 
-        public class DuplicateKeyComparer<TKey> : IComparer<TKey> where TKey : IComparable {
-            #region IComparer<TKey> Members
-
-            public int Compare (TKey x, TKey y) {
-                int result = x.CompareTo (y);
-
-                if (result == 0)
-                    return 1; // Handle equality as beeing greater
-                else
-                    return result;
-            }
-
-            #endregion
+        private static bool Collide(Vector3 cellPos, Collider2D mapCollider)
+        {
+            if (mapCollider == null) return false;
+                return mapCollider.OverlapPoint(cellPos);
         }
+
     }
 }

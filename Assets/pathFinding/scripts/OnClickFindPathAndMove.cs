@@ -31,7 +31,7 @@ public class OnClickFindPathAndMove : MonoBehaviour {
 
 	void Start() { 
 		print("START OnClickFindPathAndMove");
-		currentPath = GameObject.Find("/trackerMove/polyPath").GetComponent<Polyline>();
+		currentPath = GameObject.Find("/pathfinding/polyPath").GetComponent<Polyline>();
 		var CollisionTilemap = GameObject.Find("/background/collisionTilemap");
 		mapCollider = CollisionTilemap.GetComponent<TilemapCollider2D>();
 		tileMap = CollisionTilemap.GetComponent<Tilemap>();

@@ -23,10 +23,6 @@ namespace pathfinding {
 			return heuristique + cout;
 		}
 
-        public bool samePositionTo (Node obj) {
-			return position == obj.position;
-		}
-
 		public int CompareCostTo (Node obj) {
 			return GetFCost().CompareTo (obj.GetFCost());
 		}
@@ -105,7 +101,7 @@ namespace pathfinding {
 
         private static int findIndexByPos (Node node, List<Node> list) {
             for (int i = 0; i < list.Count; i++) {
-                if (node.samePositionTo(list[i])) {
+                if (vector3Equality(node.position, list[i].position)) {
                     return i;
                 }
             }
@@ -136,9 +132,16 @@ namespace pathfinding {
         private static bool IsClosed (Node voisin, List<Node> fermee, float voisinFCost) {
             for (int i = 0; i < fermee.Count; i++) {
                 Node noeudFerme = fermee[i];
-                if (noeudFerme.position == voisin.position && noeudFerme.GetFCost () < voisinFCost) return true;
+                if (vector3Equality(noeudFerme.position,voisin.position) && noeudFerme.GetFCost () < voisinFCost) return true;
             }
             return false;
+        }
+
+        private static bool vector3Equality(Vector3 v1, Vector3 v2){
+            float difX = v1.x - v2.x;
+            float difY = v1.y - v2.y;
+            if(difX > 0.5f || difX < -0.5f || difY > 0.5f || difY < -0.5f) return false;
+            return true;
         }
 
         private static Node[] CreateAvailableNeighbours (Node current, Vector3 target, List<Node> closed, float cout) {
@@ -164,8 +167,7 @@ namespace pathfinding {
 
         private static bool Collide(Vector3 cellPos, Collider2D mapCollider)
         {
-            if (mapCollider == null) return false;
-                return mapCollider.OverlapPoint(cellPos);
+            return mapCollider.OverlapPoint(cellPos);
         }
 
     }

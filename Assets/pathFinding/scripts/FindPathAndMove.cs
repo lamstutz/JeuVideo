@@ -7,7 +7,7 @@ using UnityEngine;
 using UnityEngine.Tilemaps;
 
 
-public class OnClickFindPathAndMove : MonoBehaviour {
+public class FindPathAndMove : MonoBehaviour {
 
 
 	private Transform objectToMove;
@@ -42,7 +42,7 @@ public class OnClickFindPathAndMove : MonoBehaviour {
 			targetV2 = new Vector2(targetObject.position.x,targetObject.position.y);
 
 			//pathfinding 
-			if (currentTarget == null || Vector2.Distance(targetV2, currentTarget) > 2.0f) {
+			if (currentTarget == null || Vector2.Distance(targetV2, currentTarget) > 2.5f) {
 				fin = false;
 				Vector3 origin = tileMap.WorldToCell(objectToMove.position);
 				Vector3 target =  tileMap.WorldToCell(targetObject.position);
@@ -79,7 +79,7 @@ public class OnClickFindPathAndMove : MonoBehaviour {
 			}
 
 			//arrivé à la cible
-			if(!fin && currentPath.nodes.Count == 0 && (Vector2.Distance(targetV2, currentTarget) <= 2.0f ) && (Vector2.Distance(targetV2, objectToMove.position) <= 2.0f) ){
+			if(!fin && currentPath.nodes.Count == 0 && (Vector2.Distance(targetV2, currentTarget) <= 2.5f ) && (Vector2.Distance(targetV2, objectToMove.position) <= 2.5f) ){
 				fin = true;
 				ended = true;
 				print("FINISH PATHFINDING");

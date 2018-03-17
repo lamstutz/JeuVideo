@@ -24,7 +24,6 @@ GameObject:
   - component: {fileID: 61554305570521898}
   - component: {fileID: 114697686852258792}
   - component: {fileID: 114775240019443486}
-  - component: {fileID: 114990951756686630}
   m_Layer: 0
   m_Name: police_man
   m_TagString: Untagged
@@ -38,9 +37,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1712849986768474}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 14.8, y: 2.7999997, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -13.86, y: 8.01, z: 0}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -81,24 +80,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00ddd33eae28b5148a72170d47ccd942, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogues:
-  - name: Policier
-    sentences:
-    - Hey, robot qu'est ce que tu fais la ?
-    - Tu n'a rien a faire seule ici.
-    option: 0
-  - name: Nao
-    sentences:
-    - Je ne sais pas, ou suis-je ?
-    option: 0
-  - name: Policier
-    sentences:
-    - Dans la foret a proximite de la ville "404land".
-    option: 0
-  - name: Nao
-    sentences:
-    - '*Que demander a cette personne ?*'
-    option: 1
 --- !u!114 &114775240019443486
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -162,17 +143,6 @@ MonoBehaviour:
     - {fileID: 21300000, guid: bcb00eec5e633453695919cbdf4cbf36, type: 3}
     - {fileID: 21300000, guid: 971e8133957404be6a6ff96722cda07d, type: 3}
     - {fileID: 21300000, guid: 8df1685f7bacb4afcb98c0cfac409c27, type: 3}
---- !u!114 &114990951756686630
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1712849986768474}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &212206517152098262
 SpriteRenderer:
   m_ObjectHideFlags: 1

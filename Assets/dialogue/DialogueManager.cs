@@ -347,7 +347,7 @@ public class DialogueManager : MonoBehaviour {
 				break;
 			case "girl":
 				// Dialogue avec la petite fille
-				sentences  = new String[] {"Snif sninf...","J'ai perdu mon ballon...", "Je n'arrive pas à le retrouver.", "Personne ne peut m'aider ?"};
+				sentences  = new String[] {"Snif snif...","J'ai perdu mon ballon...", "Je n'arrive pas à le retrouver.", "Personne ne peut m'aider ?"};
 				options  = new String[] {"Partir", "Plus d'information"};
 				unDialogue = new Dialogue("Petite fille", sentences, true, options);
 				dialogues.Add(unDialogue);
@@ -364,7 +364,7 @@ public class DialogueManager : MonoBehaviour {
 				unDialogue = new Dialogue("Petite fille", sentences, false, options);
 				dialogues.Add(unDialogue);
 				// Réponse de Nao
-				sentences  = new String[] {"Mon nom est Nao. Et j'aimerais d'aider.", "A quoi ressemble ton ballon ?"};
+				sentences  = new String[] {"Mon nom est Nao et j'aimerais d'aider.", "A quoi ressemble ton ballon ?"};
 				options  = new String[] {};
 				unDialogue = new Dialogue("Nao", sentences, false, options);
 				dialogues.Add(unDialogue);

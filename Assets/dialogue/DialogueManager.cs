@@ -226,7 +226,7 @@ public class DialogueManager : MonoBehaviour {
 		// Sélection du dialogue selon le parent
 		switch (nomDialogueEnCours)
 		{
-			case "Girl_First":
+			case "girl":
 				EndDialogue();
 				break;
 			case "police_man":
@@ -249,7 +249,7 @@ public class DialogueManager : MonoBehaviour {
 		// Sélection du dialogue selon le parent
 		switch (nomDialogueEnCours)
 		{
-			case "Girl_First":
+			case "girl":
 				choixDialogue("girl_2");
 				break;
 			case "police_man":
@@ -345,7 +345,7 @@ public class DialogueManager : MonoBehaviour {
 				unDialogue = new Dialogue("Nao", sentences, false, options);
 				dialogues.Add(unDialogue);
 				break;
-			case "Girl_First":
+			case "girl":
 				// Dialogue avec la petite fille
 				sentences  = new String[] {"Snif sninf...","J'ai perdu mon ballon...", "Je n'arrive pas à le retrouver.", "Personne ne peut m'aider ?"};
 				options  = new String[] {"Partir", "Plus d'information"};
@@ -374,7 +374,7 @@ public class DialogueManager : MonoBehaviour {
 				unDialogue = new Dialogue("Nina", sentences, false, options);
 				dialogues.Add(unDialogue);
 				break;
-			case "Girl_End":
+			case "ball":
 				// Dialogue avec la petite fille
 				sentences  = new String[] {"Mon ballon ! Merci monsieur le robot !", "Vous êtes vraiment gentil."};
 				options  = new String[] {};

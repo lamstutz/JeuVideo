@@ -39,9 +39,9 @@ GameObject:
   - component: {fileID: 212230191536747100}
   - component: {fileID: 114397908944226802}
   - component: {fileID: 114124289130505180}
+  - component: {fileID: 58375690456924710}
   - component: {fileID: 50166973745519726}
   - component: {fileID: 114926603834231660}
-  - component: {fileID: 58375690456924710}
   - component: {fileID: 114249289827301536}
   m_Layer: 0
   m_Name: Grey_robot
@@ -89,7 +89,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 1
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -105,7 +105,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 1524629256865290}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: eaa6892933bed460ea3ba7929881fa04, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -163,9 +163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0be836c336b0b4f1cb8150de0f08ee42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  acceleration: 25
-  maxSpeed: 5
-  currentSpeed: {x: 0, y: 0, z: 0}
+  acceleration: 8
 --- !u!114 &114926603834231660
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -237,7 +235,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 0
-  randomSeed: -1606849906
+  randomSeed: -933130931
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -680,7 +678,7 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 5
     enabled: 1
-    type: 8
+    type: 6
     angle: 15
     length: 0.58
     boxThickness: {x: 0, y: 0, z: 0}

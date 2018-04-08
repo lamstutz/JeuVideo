@@ -3336,8 +3336,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameText: {fileID: 858036171}
   dialogueText: {fileID: 587024665}
-  choix1Text: {fileID: 0}
-  choix2Text: {fileID: 0}
+  choix1Text: {fileID: 951630325}
+  choix2Text: {fileID: 173194232}
   animator: {fileID: 1166346527}
 --- !u!1 &1436064259
 GameObject:

@@ -111,8 +111,8 @@ public class DialogueManager : MonoBehaviour {
 		nameText.text   = dialogues[index].name;	// Nom de personnage
 		countT 			= dialogues.Count;			// Nombre de dialogue	
 
-		choix1Text.color = Color.grey;
-		choix2Text.color = Color.grey;
+		//choix1Text.color = Color.grey;
+		//choix2Text.color = Color.grey;
 	}
 	public void StartDialogue (string nomGO)
 	{

@@ -100,6 +100,9 @@ public class FindPathAndMove : MonoBehaviour {
 		targetObject = GameObject.Find(toMoveTarget[1]).GetComponent<Transform>();
 		if(toMoveTarget.Length > 2){
 			callback = toMoveTarget[2];
+			if (toMoveTarget.Length > 3) {
+				objectToMoveName = toMoveTarget[3];
+			}
 		}else{
 			callback = "";
 		}

@@ -218,6 +218,9 @@ public class DialogueManager : MonoBehaviour {
 	void EndDialogue()
 	{
 		animator.SetBool("IsOpen", false);
+		if(nomDialogueEnCours == "ball"){
+			//call to be continued
+		}
 	}
 
 	public void choix1()

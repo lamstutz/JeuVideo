@@ -29,6 +29,7 @@ public class DialogueManager : MonoBehaviour {
 	private Vector3 PosContinue;
 
 	private int selected; // 0 : aucun sélect, 1: sélect choix 1, 2: sélect choix 2.
+	private string nomDialogueEnCours;
 	
 	private int	touch;
 
@@ -111,8 +112,8 @@ public class DialogueManager : MonoBehaviour {
 		nameText.text   = dialogues[index].name;	// Nom de personnage
 		countT 			= dialogues.Count;			// Nombre de dialogue	
 
-		//choix1Text.color = Color.grey;
-		//choix2Text.color = Color.grey;
+		choix1Text.color = Color.grey;
+		choix2Text.color = Color.grey;
 	}
 	public void StartDialogue (string nomGO)
 	{
@@ -208,7 +209,7 @@ public class DialogueManager : MonoBehaviour {
 		dialogueText.text = "";
 		foreach (char letter in sentence.ToCharArray())
 		{
-			//SoundEffectsHelper.Instance.MakeLetterSound();
+			SoundEffectsHelper.Instance.MakeLetterSound();
 			dialogueText.text += letter;
 			yield return null;
 		}
@@ -222,8 +223,16 @@ public class DialogueManager : MonoBehaviour {
 	public void choix1()
 	{
 
-		// Sélection du dialogue
-		choixDialogue("police_man_1");
+		// Sélection du dialogue selon le parent
+		switch (nomDialogueEnCours)
+		{
+			case "Girl_First":
+				EndDialogue();
+				break;
+			case "police_man":
+				choixDialogue("police_man_1");
+				break;
+		}
 
 		InitializatonNewDialogue();
 		
@@ -237,8 +246,16 @@ public class DialogueManager : MonoBehaviour {
 
 	public void choix2()
 	{
-		// Choix du dialogue
-		choixDialogue("police_man_2");
+		// Sélection du dialogue selon le parent
+		switch (nomDialogueEnCours)
+		{
+			case "Girl_First":
+				choixDialogue("girl_2");
+				break;
+			case "police_man":
+				choixDialogue("police_man_2");
+				break;
+		}
 
 		InitializatonNewDialogue();
 		
@@ -251,6 +268,9 @@ public class DialogueManager : MonoBehaviour {
 	}
 
 	void choixDialogue(string nom){
+
+		// On met de coté le nom du dialogue en cours
+		nomDialogueEnCours = nom;
 
 		if(dialogues.Count > 0){
 			dialogues.Clear();
@@ -318,18 +338,47 @@ public class DialogueManager : MonoBehaviour {
 				unDialogue = new Dialogue("Policier", sentences, false, options);
 				dialogues.Add(unDialogue);
 				break;
-			case "Girl":
+			case "EntrerVille":
+				// Dialogue Nao
+				sentences  = new String[] {"Voila la ville. On pourra me donner des indications.", "Je ne devrais pas être là pourtant j'y suis."};
+				options  = new String[] {};
+				unDialogue = new Dialogue("Nao", sentences, false, options);
+				dialogues.Add(unDialogue);
+				break;
+			case "Girl_First":
 				// Dialogue avec la petite fille
 				sentences  = new String[] {"Snif sninf...","J'ai perdu mon ballon...", "Je n'arrive pas à le retrouver.", "Personne ne peut m'aider ?"};
+				options  = new String[] {"Partir", "Plus d'information"};
+				unDialogue = new Dialogue("Petite fille", sentences, true, options);
+				dialogues.Add(unDialogue);
+				break;
+			case "girl_2":
+				// Question Nao à la petite fille
+				sentences  = new String[] {"Bonjour petite humaine, comment t'appelles - tu ?"};
+				options  = new String[] {};
+				unDialogue = new Dialogue("Nao", sentences, false, options);
+				dialogues.Add(unDialogue);
+				// Réponse de la petite fille
+				sentences  = new String[] {"Nina et toi ?"};
 				options  = new String[] {};
 				unDialogue = new Dialogue("Petite fille", sentences, false, options);
 				dialogues.Add(unDialogue);
-				break;
-			case "EntrerVille":
-				// Dialogue avec la petite fille
-				sentences  = new String[] {"Voila la ville. On pourra me donner des indications.", "Je ne devrais pas être là pourtant j'y suis."};
+				// Réponse de Nao
+				sentences  = new String[] {"Mon nom est Nao. Et j'aimerais d'aider.", "A quoi ressemble ton ballon ?"};
 				options  = new String[] {};
-				unDialogue = new Dialogue("...", sentences, false, options);
+				unDialogue = new Dialogue("Nao", sentences, false, options);
+				dialogues.Add(unDialogue);
+				// Réponse de Nina
+				sentences  = new String[] {"Oh merci. Il est rond et tout rose !"};
+				options  = new String[] {};
+				unDialogue = new Dialogue("Nina", sentences, false, options);
+				dialogues.Add(unDialogue);
+				break;
+			case "Girl_End":
+				// Dialogue avec la petite fille
+				sentences  = new String[] {"Mon ballon ! Merci monsieur le robot !", "Vous êtes vraiment gentil."};
+				options  = new String[] {};
+				unDialogue = new Dialogue("Petite fille", sentences, false, options);
 				dialogues.Add(unDialogue);
 				break;
 			default:

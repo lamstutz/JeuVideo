@@ -11,6 +11,7 @@ public class DialogueManager : MonoBehaviour {
 	public Text choix1Text;
 	public Text choix2Text;
 	public Animator animator;
+	private currentLevel level;
 
 	private Queue<string> sentences;
 	private GameObject[] gos;
@@ -38,6 +39,8 @@ public class DialogueManager : MonoBehaviour {
 		sentences 		= new Queue<string>();
 		index 			= 0;
 		touch			= 0;
+
+		level = GameObject.Find("/level").GetComponent<currentLevel>();;
 
 		// Initialisation des variables boutons
 		GOChoix1 = GameObject.Find("Choix1");
@@ -219,7 +222,9 @@ public class DialogueManager : MonoBehaviour {
 	{
 		animator.SetBool("IsOpen", false);
 		if(nomDialogueEnCours == "ball"){
-			//call to be continued
+			level.level = 2;
+
+
 		}
 	}
 

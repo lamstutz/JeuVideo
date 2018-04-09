@@ -817,7 +817,6 @@ GameObject:
   - component: {fileID: 807437979}
   - component: {fileID: 807437978}
   - component: {fileID: 807437977}
-  - component: {fileID: 807437980}
   m_Layer: 0
   m_Name: barriereTriggerEnd
   m_TagString: Untagged
@@ -836,6 +835,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c39e168ce6224be28e62f091bb76769, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  level: {fileID: 977681543}
+  openLevel: 2
   elemTransform: {fileID: 93466865}
 --- !u!61 &807437978
 BoxCollider2D:
@@ -875,17 +876,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &807437980
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 807437976}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9155d2fe88cc34876bdc59dfccd6919d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &858036168
 GameObject:
   m_ObjectHideFlags: 0
@@ -1126,6 +1116,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0203470394d5740e2af97dbf5682a2a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  level: 1
 --- !u!4 &977681544
 Transform:
   m_ObjectHideFlags: 0
@@ -4957,7 +4948,6 @@ GameObject:
   - component: {fileID: 1417102891}
   - component: {fileID: 1417102890}
   - component: {fileID: 1417102889}
-  - component: {fileID: 1417102892}
   m_Layer: 0
   m_Name: endTrigger
   m_TagString: Untagged
@@ -5015,17 +5005,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1417102892
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1417102888}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0203470394d5740e2af97dbf5682a2a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1422749447
 GameObject:
   m_ObjectHideFlags: 0
@@ -5539,11 +5518,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4397297460659436, guid: 2a16a91446d594754b806aedd9b36d0e, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -3.2
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 4397297460659436, guid: 2a16a91446d594754b806aedd9b36d0e, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 10.3
+      value: -9.9
       objectReference: {fileID: 0}
     - target: {fileID: 4397297460659436, guid: 2a16a91446d594754b806aedd9b36d0e, type: 2}
       propertyPath: m_LocalPosition.z
@@ -6035,6 +6014,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c39e168ce6224be28e62f091bb76769, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  level: {fileID: 977681543}
+  openLevel: 1
   elemTransform: {fileID: 1575580157}
 --- !u!61 &1997187919
 BoxCollider2D:

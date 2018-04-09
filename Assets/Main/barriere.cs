@@ -11,6 +11,9 @@ public class barriere : MonoBehaviour {
 	private float elapsedTime = 0.0f;
 	private float currentPos;
 
+	public currentLevel level;
+	public int openLevel = 1; 
+
 	public Transform elemTransform;
 	// Use this for initialization
 	void Start () {
@@ -38,8 +41,10 @@ public class barriere : MonoBehaviour {
 	}
 
 	public void open(){
-		currentPos = opened;
-		elapsedTime = 0.0f;
+		if (level.level >= openLevel) {
+			currentPos = opened;
+			elapsedTime = 0.0f;
+		}
 	}
 
 	public void close(){

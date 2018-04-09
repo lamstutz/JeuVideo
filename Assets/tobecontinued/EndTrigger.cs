@@ -13,4 +13,8 @@ public class EndTrigger : MonoBehaviour {
 		animator.SetBool("IsOpen", true);
 	}
 
+	private void OnTriggerEnter2D (Collider2D objectCol) {
+		TriggerEnd();
+	}
+
 }

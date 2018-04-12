@@ -7,6 +7,8 @@ public class changeEmotion : MonoBehaviour
 {
     public enum Emotion { Neutre, Triste, Joie, Confusion, Colere };
 
+	public currentLevel level;
+
     public AnimationCourse neutre;
     public AnimationCourse triste;
     public AnimationCourse joie;
@@ -22,7 +24,7 @@ public class changeEmotion : MonoBehaviour
     {
         Emotion robotEmotion;
         robotEmotion = Emotion.Neutre;
-
+        
         // triste.GetComponent<GameObject>().SetActive(false);
 
         if (actionOnClick == null)
@@ -42,16 +44,24 @@ public class changeEmotion : MonoBehaviour
                 robot.GetComponent<AnimationCourse>().anims = neutre.anims;
                 break;
             case Emotion.Triste:
-                robot.GetComponent<AnimationCourse>().anims = triste.anims;
+                if(level.level >= 2){
+                    robot.GetComponent<AnimationCourse>().anims = triste.anims;
+                }
                 break;
             case Emotion.Joie:
-                robot.GetComponent<AnimationCourse>().anims = joie.anims;
+                if(level.level >= 3){
+                    robot.GetComponent<AnimationCourse>().anims = joie.anims;
+                }
                 break;
             case Emotion.Confusion:
-                robot.GetComponent<AnimationCourse>().anims = confusion.anims;
+                if(level.level >= 4){
+                    robot.GetComponent<AnimationCourse>().anims = confusion.anims;
+                }
                 break;
             case Emotion.Colere:
-                robot.GetComponent<AnimationCourse>().anims = colere.anims;
+                if(level.level >= 5){
+                    robot.GetComponent<AnimationCourse>().anims = colere.anims;
+                }
                 break;
         }
     }

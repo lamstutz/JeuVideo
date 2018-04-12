@@ -73,6 +73,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4763487434656212}
+  - component: {fileID: 114425044534080342}
   m_Layer: 0
   m_Name: Emotion
   m_TagString: Untagged
@@ -92,7 +93,7 @@ GameObject:
   - component: {fileID: 58288648424591216}
   - component: {fileID: 114287161641679340}
   m_Layer: 0
-  m_Name: "col\xE8re"
+  m_Name: colere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -285,7 +286,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4747809ca40a34301a3b273ff421c68c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  neutre: {fileID: 114124289130505180, guid: c92c0720f4f3944b19303fd87415460b, type: 2}
+  level: {fileID: 0}
+  neutre: {fileID: 114337300367300622, guid: c92c0720f4f3944b19303fd87415460b, type: 2}
   triste: {fileID: 114114231006791274, guid: b518e77378a7f406e84a320e3f709ee5, type: 2}
   joie: {fileID: 114647517748113452, guid: d5fb3716682f14b098ab551fb655abba, type: 2}
   confusion: {fileID: 114982222373836074, guid: 6cee1a42a21da4346b3920712ad323a7,
@@ -298,7 +300,7 @@ MonoBehaviour:
         m_MethodName: changeEmotions
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgument: {fileID: 1803125976698442}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -308,6 +310,26 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   emotionID: 4
+--- !u!114 &114425044534080342
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1578253628848162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30de7ad649f524ce8825436eb3650bc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colereIcon: {fileID: 21300000, guid: 17e818644747442fd8633304e04e6c77, type: 3}
+  joieIcon: {fileID: 21300000, guid: 9443b879461c64af99397e89c2bafecd, type: 3}
+  tristesseIcon: {fileID: 21300000, guid: f924976337d344ee888ad85d90c297e1, type: 3}
+  confusionIcon: {fileID: 21300000, guid: 12c56724b7fd8411e9ac04f8231f2b8f, type: 3}
+  level: {fileID: 0}
+  colereIcon_trans: {fileID: 212608881327830660}
+  joieIcon_trans: {fileID: 212571979179946992}
+  tristesseIcon_trans: {fileID: 212099764145419768}
+  confusionIcon_trans: {fileID: 212324470954362356}
 --- !u!114 &114537233467710300
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -319,7 +341,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4747809ca40a34301a3b273ff421c68c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  neutre: {fileID: 114124289130505180, guid: c92c0720f4f3944b19303fd87415460b, type: 2}
+  level: {fileID: 0}
+  neutre: {fileID: 114337300367300622, guid: c92c0720f4f3944b19303fd87415460b, type: 2}
   triste: {fileID: 114114231006791274, guid: b518e77378a7f406e84a320e3f709ee5, type: 2}
   joie: {fileID: 114647517748113452, guid: d5fb3716682f14b098ab551fb655abba, type: 2}
   confusion: {fileID: 114982222373836074, guid: 6cee1a42a21da4346b3920712ad323a7,
@@ -332,7 +355,7 @@ MonoBehaviour:
         m_MethodName: changeEmotions
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgument: {fileID: 1342338460226868}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -353,7 +376,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4747809ca40a34301a3b273ff421c68c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  neutre: {fileID: 114124289130505180, guid: c92c0720f4f3944b19303fd87415460b, type: 2}
+  level: {fileID: 0}
+  neutre: {fileID: 114337300367300622, guid: c92c0720f4f3944b19303fd87415460b, type: 2}
   triste: {fileID: 114114231006791274, guid: b518e77378a7f406e84a320e3f709ee5, type: 2}
   joie: {fileID: 114647517748113452, guid: d5fb3716682f14b098ab551fb655abba, type: 2}
   confusion: {fileID: 114982222373836074, guid: 6cee1a42a21da4346b3920712ad323a7,
@@ -366,7 +390,7 @@ MonoBehaviour:
         m_MethodName: changeEmotions
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgument: {fileID: 1912871751377072}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -387,7 +411,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4747809ca40a34301a3b273ff421c68c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  neutre: {fileID: 114124289130505180, guid: c92c0720f4f3944b19303fd87415460b, type: 2}
+  level: {fileID: 0}
+  neutre: {fileID: 114337300367300622, guid: c92c0720f4f3944b19303fd87415460b, type: 2}
   triste: {fileID: 114114231006791274, guid: b518e77378a7f406e84a320e3f709ee5, type: 2}
   joie: {fileID: 114647517748113452, guid: d5fb3716682f14b098ab551fb655abba, type: 2}
   confusion: {fileID: 114982222373836074, guid: 6cee1a42a21da4346b3920712ad323a7,
@@ -400,7 +425,7 @@ MonoBehaviour:
         m_MethodName: changeEmotions
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgument: {fileID: 1273255530363198}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -421,7 +446,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4747809ca40a34301a3b273ff421c68c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  neutre: {fileID: 114124289130505180, guid: c92c0720f4f3944b19303fd87415460b, type: 2}
+  level: {fileID: 0}
+  neutre: {fileID: 114337300367300622, guid: c92c0720f4f3944b19303fd87415460b, type: 2}
   triste: {fileID: 114114231006791274, guid: b518e77378a7f406e84a320e3f709ee5, type: 2}
   joie: {fileID: 114647517748113452, guid: d5fb3716682f14b098ab551fb655abba, type: 2}
   confusion: {fileID: 114982222373836074, guid: 6cee1a42a21da4346b3920712ad323a7,
@@ -434,7 +460,7 @@ MonoBehaviour:
         m_MethodName: changeEmotions
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgument: {fileID: 1093113362434388}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -522,7 +548,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 21300000, guid: f924976337d344ee888ad85d90c297e1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: eb2264cc537414231982787d405abaf9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -566,7 +592,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 21300000, guid: 12c56724b7fd8411e9ac04f8231f2b8f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 15abb108cb69e42c69ae810bd6fcb278, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -610,7 +636,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 21300000, guid: 9443b879461c64af99397e89c2bafecd, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ab7b7a58805f14a5c98af101b3a819ba, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -654,7 +680,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 21300000, guid: 17e818644747442fd8633304e04e6c77, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 29da29bafa0484e77a34533c3449c8a8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

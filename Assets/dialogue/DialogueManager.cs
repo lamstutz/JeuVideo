@@ -13,6 +13,8 @@ public class DialogueManager : MonoBehaviour {
 	public Animator animator;
 
 	private currentLevel level;
+	public GameObject winEmotion;
+	private winEmotion win_emotion;
 
 	private Queue<string> sentences;
 	private GameObject[] gos;
@@ -43,6 +45,7 @@ private Renderer ball;
 
 		level = GameObject.Find("/level").GetComponent<currentLevel>();;
 		ball = GameObject.Find("ball").GetComponent<Renderer>();
+		win_emotion = winEmotion.GetComponent<winEmotion>();
 
 		// Initialisation des variables boutons
 		GOChoix1 = GameObject.Find("Choix1");
@@ -230,6 +233,7 @@ private Renderer ball;
 			level.level = 2;
 			ball.enabled = true;
 		}
+		win_emotion.UpdateEmotion();
 	}
 
 	public void choix1()

@@ -12,7 +12,7 @@ public class barriere : MonoBehaviour {
 	private float currentPos;
 
 	public currentLevel level;
-	public int openLevel = 1; 
+	public int openLevel = 3; 
 
 	public Transform elemTransform;
 	// Use this for initialization

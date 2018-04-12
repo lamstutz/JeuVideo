@@ -29,19 +29,19 @@ public class MoveRobot : MonoBehaviour
 		Vector2 force = Vector2.zero;
 
 
-		if (Input.GetKey (KeyCode.LeftArrow)) 
+		if (Input.GetAxis("Horizontal") < 0) 
 		{
 			force.x -= acceleration;
 		}
-		if (Input.GetKey (KeyCode.RightArrow)) 
+		if (Input.GetAxis("Horizontal") > 0) 
 		{
 			force.x += acceleration;
 		}
-		if (Input.GetKey (KeyCode.UpArrow)) 
+		if (Input.GetAxis("Vertical") > 0) 
 		{
 			force.y += acceleration;
 		}
-		if (Input.GetKey (KeyCode.DownArrow)) 
+		if (Input.GetAxis("Vertical") < 0) 
 		{
 			force.y -= acceleration;
 		}

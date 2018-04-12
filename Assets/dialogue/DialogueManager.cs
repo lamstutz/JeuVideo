@@ -11,6 +11,7 @@ public class DialogueManager : MonoBehaviour {
 	public Text choix1Text;
 	public Text choix2Text;
 	public Animator animator;
+
 	private currentLevel level;
 
 	private Queue<string> sentences;
@@ -33,7 +34,7 @@ public class DialogueManager : MonoBehaviour {
 	private string nomDialogueEnCours;
 	
 	private int	touch;
-
+private Renderer ball;
 	// Use this for initialization
 	void Start () {
 		sentences 		= new Queue<string>();
@@ -41,6 +42,7 @@ public class DialogueManager : MonoBehaviour {
 		touch			= 0;
 
 		level = GameObject.Find("/level").GetComponent<currentLevel>();;
+		ball = GameObject.Find("ball").GetComponent<Renderer>();
 
 		// Initialisation des variables boutons
 		GOChoix1 = GameObject.Find("Choix1");
@@ -222,9 +224,11 @@ public class DialogueManager : MonoBehaviour {
 	{
 		animator.SetBool("IsOpen", false);
 		if(nomDialogueEnCours == "ball"){
+			level.level = 3;
+		}
+		if(nomDialogueEnCours == "girl" || nomDialogueEnCours == "girl_2"){
 			level.level = 2;
-
-
+			ball.enabled = true;
 		}
 	}
 
